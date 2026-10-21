@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 470" role="img" aria-labelledby="chip-title chip-desc">
-  <title id="chip-title">Programmable logic meets space-environment research</title>
-  <desc id="chip-desc">An FPGA chip surrounded by labels for digital hardware, device physics, and space-environment research.</desc>
+  <title id="chip-title">Microelectronics and applied physics</title>
+  <desc id="chip-desc">A microchip with orbital rings and surrounding labels for digital hardware, device physics, and space-environment research.</desc>
   <defs>
     <linearGradient id="chip-fill" x1="0" y1="0" x2="1" y2="1">
       <stop stop-color="#1c2d43" />
@@ -16,16 +16,16 @@
     </pattern>
   </defs>
   <circle cx="265" cy="230" r="220" fill="url(#halo)" />
+  <g fill="none" stroke="#30363d" stroke-width="1">
+    <ellipse cx="260" cy="226" rx="220" ry="93" transform="rotate(-32 260 226)" />
+    <ellipse cx="260" cy="226" rx="206" ry="114" transform="rotate(39 260 226)" />
+  </g>
   <g fill="#1c2c40" stroke="#58a6ff" stroke-opacity=".6">
     <path d="M180 128v-18h12v18m12 0v-18h12v18m12 0v-18h12v18m12 0v-18h12v18m12 0v-18h12v18m12 0v-18h12v18m12 0v-18h12v18M180 324v18h12v-18m12 0v18h12v-18m12 0v18h12v-18m12 0v18h12v-18m12 0v18h12v-18m12 0v18h12v-18m12 0v18h12v-18M162 151h-18v12h18m0 12h-18v12h18m0 12h-18v12h18m0 12h-18v12h18m0 12h-18v12h18m0 12h-18v12h18m0 12h-18v12h18M358 151h18v12h-18m0 12h18v12h-18m0 12h18v12h-18m0 12h18v12h-18m0 12h18v12h-18m0 12h18v12h-18m0 12h18v12h-18" />
   </g>
   <rect x="160" y="126" width="200" height="200" rx="12" fill="url(#chip-fill)" stroke="#58a6ff" stroke-opacity=".65" />
   <rect x="173" y="139" width="174" height="174" rx="6" fill="none" stroke="#58a6ff" stroke-opacity=".18" />
   <rect x="188" y="154" width="144" height="144" fill="url(#logic-cells)" />
-  <rect x="203" y="195" width="114" height="63" rx="4" fill="#0d1117" stroke="#58a6ff" stroke-opacity=".4" />
-  <text x="260" y="222" fill="#f0f6fc" font-size="24" font-family="Consolas,monospace" text-anchor="middle" letter-spacing="4">FPGA</text>
-  <text x="260" y="243" fill="#58a6ff" font-size="8" font-family="Consolas,monospace" text-anchor="middle" letter-spacing="1.5">PROGRAMMABLE LOGIC</text>
-  <circle cx="179" cy="145" r="3" fill="#58a6ff" />
   <g font-family="Consolas,monospace" font-size="8" letter-spacing="1.1">
     <text x="341" y="62" fill="#39c5cf">SPACE ENVIRONMENTS</text>
     <text x="32" y="402" fill="#bc8cff">DEVICE PHYSICS</text>
