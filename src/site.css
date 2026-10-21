@@ -88,8 +88,6 @@ a:hover .arrow { transform:translate(3px,-2px); }
 .research-points { margin:24px 0 0; padding-left:18px; font-size:13px; color:#a8b3bf; line-height:1.85; }
 .research-points li + li { margin-top:14px; }
 .research-points li::marker { color:var(--accent); }
-.tags { display:flex; flex-wrap:wrap; gap:7px; margin-top:25px; }
-.tag { padding:3px 8px; border:1px solid var(--border); border-radius:3px; color:var(--muted); font:9px/1.7 var(--mono); }
 .publications-section { background:var(--deep); border-block:1px solid #21262d; }
 .publication-group + .publication-group { margin-top:40px; }
 .publication-group-title { font-size:19px; margin-bottom:16px; letter-spacing:-.02em; }
@@ -111,14 +109,15 @@ a:hover .arrow { transform:translate(3px,-2px); }
 .pub-footer { border-top:1px solid var(--border); padding-top:24px; display:flex; flex-wrap:wrap; gap:24px; }
 .about-section { background:var(--surface); border-block:1px solid var(--border); }
 .about-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:90px; }
-.about-copy .eyebrow { margin-bottom:15px; }
 .about-copy > p { margin-top:25px; color:#a8b3bf; font-size:14px; line-height:1.9; }
 .about-copy > p strong { color:var(--white); font-weight:500; }
 .about-copy .text-link { display:inline-block; margin-top:24px; }
 .skills { margin-top:38px; padding-top:25px; border-top:1px solid var(--border); }
-.skills h3 { font:10px/1.6 var(--mono); text-transform:uppercase; letter-spacing:.1em; color:var(--muted); }
-.skills .tags { margin-top:15px; }
-.skills .tag { color:var(--text); font-size:10px; padding:4px 9px; }
+.skills h3 { font-size:20px; }
+.skills-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr)); gap:24px; margin-top:20px; }
+.skills h4 { font-size:15px; font-weight:600; }
+.skills ul { margin:12px 0 0; padding-left:18px; color:#a8b3bf; font-size:12px; line-height:1.8; }
+.skills li + li { margin-top:6px; }
 .timeline-heading { font:10px/1.6 var(--mono); text-transform:uppercase; letter-spacing:.12em; color:var(--muted); margin-bottom:26px; }
 .timeline-item { position:relative; border-left:1px solid var(--border); padding:0 0 29px 25px; margin-left:4px; }
 .timeline-item::before { content:""; position:absolute; top:6px; left:-4px; height:7px; width:7px; border-radius:50%; background:var(--blue); outline:5px solid var(--surface); }
