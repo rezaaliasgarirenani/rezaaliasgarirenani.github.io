@@ -1,3 +1,0 @@
-# Optional tools for normal Chrome checks and SVG/canvas PNG exports.
-# Runtime publishing and packaging use only Python's standard library.
-playwright==1.64.0

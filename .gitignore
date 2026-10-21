@@ -1,7 +1,5 @@
-# Generated deployment and browser output
+# Generated deployment files
 dist/
-artifacts/
-.venv/
 __pycache__/
 *.py[cod]
 
