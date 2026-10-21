@@ -13,7 +13,7 @@
   <meta property="og:title" content="Reza Aliasgari Renani">
   <meta property="og:description" content="RTL &amp; Verification | Semiconductor Physics | Plasma Systems. FPGA-based ISP, electrical characterization of semiconductor devices, plasma systems and radiation conditions.">
   <meta property="og:url" content="https://rezaaliasgarirenani.github.io/">
-  <link rel="stylesheet" href="src/site.css?v=name_and_orbitals">
+  <link rel="stylesheet" href="src/site.css?v=technical_research">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -37,7 +37,7 @@
         <blockquote class="hero-statement"><p><span class="hero-questions">Why explore the unknown? Why liquefy nitrogen? Why irradiate ICs?</span> For without it, all is lost but the poisonous question: <em>Why am I here?</em> The asking of which will lead you to wither away into the abyss of miserable mediocrity.</p></blockquote>
         <div class="hero-actions"><a class="button" href="#research">Explore my research <span aria-hidden="true">↓</span></a><a class="button secondary" href="assets/reza_aliasgari_renani_cv.pdf?v=20261013" target="_blank" rel="noopener noreferrer" aria-label="View CV (PDF, opens in a new tab)">View CV <span aria-hidden="true">↗</span></a></div>
       </div><figure class="hero-figure">
-        <img src="assets/graphics/fpga_schematic.svg?v=atomic_chip" width="520" height="470" alt="A microchip at the center of two wide, crossing atomic orbital rings.">
+        <img src="assets/graphics/fpga_schematic.svg?v=subtle_orbitals" width="520" height="470" alt="A microchip with two subtle orbital rings behind it.">
       </figure></div>
       <div class="container hero-foot"><button class="motion-toggle" type="button" aria-label="Pause animation" hidden><span class="motion-symbol" aria-hidden="true">Ⅱ</span><span class="motion-label">Pause binary motion</span></button></div>
     </section>
@@ -48,25 +48,32 @@
     </nav></div>
 
     <section class="section" id="research" aria-labelledby="research-title"><div class="container">
-      <div class="section-head"><div><span class="eyebrow">01 / What I investigate</span><h2 id="research-title">Research, across scales.</h2></div><p>From the logic inside a chip to the environments around it. My work connects digital design with experimental physics.</p></div>
+      <div class="section-head"><h2 id="research-title">Research</h2></div>
       <div class="research-grid">
         <article class="research-card" id="digital-design" style="--accent:var(--blue)">
-          <div class="card-top"><span>01 / RTL &amp; VERIFICATION</span><img class="research-icon" src="assets/graphics/digital_design.svg" width="25" height="25" alt=""></div>
-          <h3>Algorithms into hardware.</h3><p>Fixed-point DSP and FPGA image processing, from manual Verilog and Simulink-generated HDL to simulation, synthesis, and board-level verification.</p>
-          <div class="tags"><span class="tag">Verilog / SystemVerilog</span><span class="tag">FPGA</span><span class="tag">Image processing</span></div>
-          <details><summary>Methods &amp; tools</summary><p>AXI and AXI4-Stream testbenches; Python and cocotb verification; Vivado synthesis. Pipelines include demosaicing, Sobel operators, rgb2hsv, tone mapping, distortion correction, and resizing.</p></details>
+          <div class="card-top"><h3>RTL &amp; Verification</h3><img class="research-icon" src="assets/graphics/digital_design.svg" width="25" height="25" alt=""></div>
+          <ul class="research-points">
+            <li>Developed Verilog RTL, a fixed-point arithmetic library, and LUT-based function approximations using Horner’s method.</li>
+            <li>Implemented rgb2hsv, Sobel operators, tone mapping, demosaicing, lens distortion correction, and resizing in manual and Simulink-generated HDL.</li>
+            <li>Built AXI and AXI4-Stream SystemVerilog testbenches; compared reconstructed frames with Python, MATLAB, and Simulink reference models; automated simulation and output analysis with Python and cocotb.</li>
+            <li>Synthesized and implemented designs in Vivado; verified ISP pipelines on Xilinx Zybo Z7-20 and Nexys Video boards.</li>
+          </ul>
         </article>
         <article class="research-card" id="semiconductor-physics" style="--accent:var(--purple)">
-          <div class="card-top"><span>02 / SEMICONDUCTOR PHYSICS</span><img class="research-icon" src="assets/graphics/device_physics.svg" width="25" height="25" alt=""></div>
-          <h3>Understanding radiation effects.</h3><p>Electrical characterization of irradiated MOS structures. I use capacitance–voltage and thermally stimulated current measurements to investigate electrically active defects.</p>
-          <div class="tags"><span class="tag">MOS devices</span><span class="tag">C–V / TSC</span><span class="tag">MATLAB automation</span></div>
-          <details><summary>Methods &amp; tools</summary><p>Low-energy electron and gamma irradiation; measurements over 80–400 K; trap analysis and interface-state characterization. Instrument automation with Keithley, Keysight, Lakeshore, and Zurich Instruments equipment.</p></details>
+          <div class="card-top"><h3>Semiconductor Physics</h3><img class="research-icon" src="assets/graphics/device_physics.svg" width="25" height="25" alt=""></div>
+          <ul class="research-points">
+            <li>Characterized aluminum-gated SiO<sub>2</sub> MOS capacitors after 1–20 keV electron and 1 MeV gamma irradiation using capacitance–voltage (C–V) and thermally stimulated current (TSC) measurements over 80–400 K.</li>
+            <li>Combined C–V shifts and TSC spectra to locate electrically active traps, classify electron- or hole-trapping behavior, estimate activation energies, and calculate interface-state density.</li>
+            <li>Developed MATLAB applications to automate TSC, C–V, current–voltage, current–time, and deep-level transient spectroscopy measurements.</li>
+          </ul>
         </article>
         <article class="research-card" id="plasma-systems" style="--accent:var(--cyan)">
-          <div class="card-top"><span>03 / PLASMA SYSTEMS</span><img class="research-icon" src="assets/graphics/plasma_space.svg" width="25" height="25" alt=""></div>
-          <h3>Testing beyond the lab bench.</h3><p>Electron-beam plasma facilities for simulating space-flight conditions, investigating FPGA reliability under irradiation, thermal cycling, and surface charging.</p>
-          <div class="tags"><span class="tag">Electron-beam plasma</span><span class="tag">Radiation testing</span><span class="tag">Space environments</span></div>
-          <details><summary>Experimental conditions</summary><p>Electron beams of 25–60 keV, up to 100 mA, in low-pressure oxygen atmospheres. Combined thermal cycling over 218–393 K and surface charging to study FPGA behavior.</p></details>
+          <div class="card-top"><h3>Plasma Systems</h3><img class="research-icon" src="assets/graphics/plasma_space.svg" width="25" height="25" alt=""></div>
+          <ul class="research-points">
+            <li>Conducted FPGA-board irradiation experiments using 25–60 keV electron beams at currents up to 100 mA.</li>
+            <li>Used low-pressure oxygen atmospheres (10<sup>−6</sup>–50 Torr), generating plasma and X-rays.</li>
+            <li>Applied combined thermal cycling (218–393 K) and surface charging to evaluate FPGA reliability under plasma conditions.</li>
+          </ul>
         </article>
       </div>
     </div></section>
