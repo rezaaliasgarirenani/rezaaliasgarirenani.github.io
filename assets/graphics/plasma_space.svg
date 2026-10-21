@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#39c5cf" stroke-width="1.2">
+  <title>Plasma Space research icon</title>
+  <circle cx="12" cy="12" r="7"/>
+  <ellipse cx="12" cy="12" rx="11" ry="4" transform="rotate(-35 12 12)"/>
+  <circle cx="19" cy="6" r="2" fill="#161b22"/>
+  <path d="m10 9 4 3-4 3"/>
+</svg>

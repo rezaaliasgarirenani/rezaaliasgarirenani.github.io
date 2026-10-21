@@ -1,0 +1,19 @@
+# Generated deployment and browser output
+dist/
+artifacts/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Generated LaTeX files (the published PDF lives in assets/)
+documents/cv/*.aux
+documents/cv/*.log
+documents/cv/*.out
+documents/cv/*.pdf
+documents/cv/*.fls
+documents/cv/*.fdb_latexmk
+documents/cv/*.synctex.gz
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db

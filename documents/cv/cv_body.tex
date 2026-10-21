@@ -1,0 +1,148 @@
+%---------- HEADING ----------
+\noindent
+\begin{minipage}[t]{\cvheaderleftcolumnwidth}
+    \vspace{\cvheadervoffset}
+    {\cvnamefont Reza {\bfseries Aliasgari Renani}} \\[\cvnameafterspace]
+    {\cvcontactfont
+    \href{mailto:aliasgari.rrkh@phystech.edu}{\raisebox{0\height}\faEnvelope\ Email: aliasgari.rrkh@phystech.edu} \quad $|$ \quad
+    \href{tel:+79850692342}{\raisebox{0\height}\faPhone\ Phone: +7 (985) 069-23-42}}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{\cvheaderdividercolumnwidth}
+    \vspace{\cvheadervoffset}
+    \centering
+    \color{black!45}\rule{\cvdividerwidth}{\cvdividerheight}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{\cvheaderrightcolumnwidth}
+    \vspace{\cvheadervoffset}
+    {\cvlinksfont
+    \href{https://orcid.org/0009-0000-8983-755X}{\raisebox{0\height}\aiOrcid\ ORCID} $|$
+    \href{https://www.scopus.com/authid/detail.uri?authorId=58953218100}{\raisebox{0\height}\aiScopus\ Scopus} $|$
+    \href{https://www.webofscience.com/wos/author/record/OBN-8060-2025}{\raisebox{-0.2\height}{\simpleicon{clarivate}}\ Web of Science} $|$
+    \href{https://ieeexplore.ieee.org/author/808687147056276}{\raisebox{-0.1\height}{\aiIEEE}\ IEEE} \\
+    \href{https://www.researchgate.net/profile/Reza-Aliasgari-Renani}{\raisebox{0\height}\faResearchgate\ ResearchGate} $|$
+    \href{https://scholar.google.com/citations?user=L9Vv3C8AAAAJ&hl=en}{\raisebox{-0.2\height}{\simpleicon{googlescholar}}\ Google Scholar} $|$
+    \href{https://github.com/rezaaliasgarirenani}{\raisebox{0\height}\faGithub\ GitHub} $|$
+    \href{https://linkedin.com/in/reza-aliasgari-renani}{\raisebox{0\height}\faLinkedin\ LinkedIn} \\
+    \href{mailto:rezaaliasgarirenani@gmail.com}{\raisebox{-0.2\height}{\simpleicon{gmail}}\ Gmail: rezaaliasgarirenani@gmail.com}}
+\end{minipage}
+
+%----------- EDUCATION -----------
+\resumesection{Ed}{ucation}
+
+\resumeSubHeadingListStart
+    \resumeSubheading
+        {\href{https://mipt.ru/}{Moscow Institute of Physics and Technology (MIPT, Phystech)}}{Sep 2024 -- Jun 2026}
+        {\textbf{M.S.} in Applied Mathematics and Physics, Plasma Systems, \textbf{GPA: 4.82/5.0}}{Moscow, Russia}
+        \begin{itemize}
+            \item{\resumeitemfont \textbf{Thesis title:} Investigation of radiation-induced effects on programmable microelectronic systems by means of plasma-based facilities simulating space flight conditions.}
+        \end{itemize}
+    \resumeSubheading
+        {\href{https://mipt.ru/}{Moscow Institute of Physics and Technology (MIPT, Phystech)}}{Sep 2020 -- Jun 2024}
+        {\textbf{B.S.} in Technical Physics, Aerospace Engineering, \textbf{GPA: 4.56/5.0}}{Moscow, Russia}
+        \begin{itemize}
+            \item{\resumeitemfont \textbf{Thesis title:} Investigation of the effect of low energy (1 - 20 keV) electron and high energy (1 MeV) gamma quanta irradiation on the electro-physical properties of dielectric-semiconductor structures.}
+        \end{itemize}
+\resumeSubHeadingListEnd
+
+%----------- EXPERIENCE -----------
+\resumesection{Re}{search Experience}
+\resumeSubHeadingListStart
+    \resumeTwoLineSubheading
+        {\href{http://ai.mipt.ru/design-center}{Laboratory of Software and System-on-Chip Development}}
+        {\href{http://ai.mipt.ru/design-center}{Design Center for the Development of Microprocessor Technology for AI Systems, MIPT}}
+        {Sep 2024 -- Present}
+        {\textbf{Programmer / RTL Design Engineer}}{Moscow, Russia}
+        \resumeItemListStart
+            \resumeItem{\textbf{Verilog RTL Development} \\ Ported mathematical algorithms into Verilog. Built a fixed-point arithmetic library and LUT-based function approximations using Horner's method. Implemented image signal processing algorithms using both Simulink-generated and manually written HDL code. Optimized latency and throughput by resolving synchronization and pipelining issues. {\textbf{ISP} algorithms}: rgb2hsv, Sobel operators, tone mapping, demosaicing, lens distortion correction, and resizing.}
+            \resumeItem{\textbf{Simulation, Verification, and Synthesis} \\ Built custom SystemVerilog testbenches for AXI and AXI4-Stream interfaces that streamed image data with video-control timing, captured output pixels, and compared reconstructed frames with Python, MATLAB, and Simulink reference models. Automated image conversion, memory-file generation, simulation, and output analysis using Python and cocotb. Ran RTL simulations with Synopsys VCS, Cadence simulators, Vivado Simulator, and Icarus Verilog. Synthesized, mapped, routed, and generated bitstreams using Vivado. Verified ISP pipelines on Xilinx Zybo Z7-20 and Nexys Video boards using HDMI test-image streams and a live Pcam 5C camera.}
+           \resumeItem{\textbf{FPGA Devices under Electron-Beam Plasma Exposure} \\ Conducted irradiation experiments on FPGA boards using electron beams (25 -- 60\,keV, up to 100\,mA) in low-pressure oxygen atmospheres ($10^{-6}$ -- 50\,Torr), generating plasma and X-rays. Applied combined thermal cycling ($218$--$393$\,K) and surface charging to evaluate FPGA reliability under plasma conditions.}
+        \resumeItemListEnd
+    \resumeTwoLineSubheading
+        {\href{https://www.iptm.ru/new/index.ru.html}{Laboratory of Local Diagnostics of Semiconductor Materials}}
+        {\href{https://www.iptm.ru/new/index.ru.html}{Institute of Microelectronics Technology, Russian Academy of Sciences (IMT RAS)}}
+        {Mar 2023 -- Aug 2024}
+        {\textbf{Laboratory Researcher}}{Moscow, Russia}
+        \resumeItemListStart
+            \resumeItem{\textbf{Experimental Equipment Installation and Automation} \\ Installed experimental devices including Everbeing Cryo-station ($80$--$450$\,K) with 4 micromanipulators, Lakeshore Temperature Controller Model 336, Keithley SourceMeter 2450, Parametric Analyzer Keithley 4200A-SCS, Keysight Electrometer B2987A, Aktakom 3048, and Zurich Instruments MFIA Impedance Analyzer. Developed {\href{https://github.com/rezaaliasgarirenani/imt_ras}{applications}} in MATLAB to automate experimental techniques: thermally stimulated current, capacitance-voltage, current-voltage, current-time, and deep-level transient spectroscopy.}
+            \resumeItem{\textbf{Electrical Characterization of Irradiated MOS Devices} \\ Selected appropriate C--V and TSC measurement parameters based on semiconductor physics. Characterized \ce{SiO2}-based, aluminum-gated MOS capacitors after 1--20\,keV electron and 1\,MeV gamma irradiation using capacitance--voltage and thermally stimulated current measurements over $80$--$400$\,K.}
+            \resumeItem{\textbf{Experimental Investigation} \\ Combined C--V shifts with TSC spectra to locate electrically active traps within the dielectric or semiconductor or at their interface, classify electron- or hole-trapping behavior, and estimate activation energies. Analyzed the heating-rate dependence of TSC peak positions and magnitudes, calculated interface-state density and related MOS parameters, and processed the results in MATLAB and Origin Pro for comparison with theoretical models.}
+        \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%----------- PUBLICATIONS ---------------
+\resumesection{Pu}{blications}
+\noindent\textbf{Journals}
+\begin{enumerate}[label={[\arabic*]}]
+    \item \underline{R. Aliasgari Renani}, O. A. Soltanovich, M. A. Knyazev, and S. V. Koveshnikov, ``Investigation of low energy electron irradiated \ce{SiO2} based MOS devices by capacitance-voltage and thermally stimulated current techniques,'' \textit{Russian Microelectronics}, vol.~52, no.~S1, pp.~S274--S278, Dec.~2023, Journal Paper, \href{https://doi.org/10.1134/S1063739723600516}{DOI}.
+\end{enumerate}
+\noindent\textbf{Conferences}
+\begin{enumerate}[label={[\arabic*]}]
+    \item \underline{R. Aliasgari Renani} et al., ``Investigation of FPGA resource utilization in manual and Simulink-generated Verilog implementations of image signal processing algorithms,'' in Proc. \textit{28th International Conference on Digital Signal Processing and its Applications} (\textit{DSPA}), 2026, Conference Paper, \href{https://doi.org/10.1109/DSPA69176.2026.11476776}{DOI}.
+    \item \underline{R. Aliasgari Renani} and M. N. Vasiliev, ``Simulating space environments with electron-beam plasma for FPGA radiation testing,'' \textit{68th All-Russian Scientific Conference of MIPT}, 2026, \href{https://conf.mipt.ru/conference/23999}{Presentation}.
+    \item \underline{V. Vologin}, R. Aliasgari Renani, V. Vasilevskiy, and V. Chesnokov, ``Comparative analysis of manual and Simulink-generated Verilog code for image processing algorithms,'' \textit{YADRO FPGA-Systems Conference}, 2025, \href{https://meetups.yadro.com/fpga-msk-1125/}{Presentation}.
+    \item O. A. Soltanovich, \underline{R. Aliasgari Renani}, S. V. Koveshnikov, M. A. Knyazev, A. V. Kovalchuk, and S. Yu. Shapoval, ``Study of the traps in \ce{SiO2} and \ce{Si3N4} generated by low-energy electron irradiation and hydrogen plasma treatment using capacitance-voltage and thermally stimulated current techniques,'' in Proc. \textit{15th International Conference on Micro- and Nanoelectronics} (\textit{ICMNE}), 2023, p.~122, Presentation, \href{https://doi.org/10.29003/m3563.ICMNE-2023}{DOI}.
+    \item \underline{R. Aliasgari Renani}, O. A. Soltanovich, M. A. Knyazev, and S. V. Koveshnikov, ``Investigation of electrically active defects introduced into silicon oxide by irradiation of low-energy electrons,'' in Proc. \textit{2nd Joint Conf. Electron Beam Technol. and X-ray Optics in Microelectronics} (\textit{CEBT}), 2023, \href{https://cebt23.iptm.ru/download/numbered/91.pdf}{Poster}.
+
+\end{enumerate}
+
+%----------- SKILLS -----------
+\resumesection{Sk}{ills}
+{\centering
+    \begin{minipage}[t]{\cvskillscolumnwidth}
+        \textbf{Advanced}
+        \begin{itemize}
+            \item Automation of Experimental Techniques
+            \item Electrical Characterization
+            \item MATLAB, Simulink, HDL Coder
+            \item Verilog, RTL, FPGA Development
+            \item SciPy, cocotb, OpenCV
+            \item Git, Linux OS, \LaTeX, Microsoft Office
+            \item English (C1), Persian (Native)
+        \end{itemize}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{\cvskillscolumnwidth}
+        \textbf{Intermediate}
+        \begin{itemize}
+            \item Python, C++, Arduino
+            \item Vivado, Vitis, Vitis HLS
+            \item OriginLab, Data Processing
+            \item SolidWorks, 3D Design
+            \item PCB, EasyEDA
+            \item OpenRocket, ERDAS IMAGINE
+            \item German (B1), Russian (B1)
+        \end{itemize}
+    \end{minipage}
+\par}
+
+%----------- PROJECTS -----------
+\resumesection{Pr}{ojects}
+\noindent \href{https://github.com/rezaaliasgarirenani/fastapi_phystech_fpga}{\textbf{REST API using Python and FastAPI}} \hfill \textbf{Jan 2026 -- Jun 2026}
+\begin{itemize}
+    \item Developed and tested a REST service with SQLite, SQLAlchemy, JWT authentication, CRUD endpoints, and a rule-based FPGA selection algorithm for space missions.
+\end{itemize}
+\noindent \href{https://github.com/rezaaliasgarirenani/engineering_projects}{\textbf{Engineering Prototypes and Models}} \hfill \textbf{Jun 2022 -- Apr 2025}
+\begin{itemize}
+    \item \href{https://github.com/icarus-imperium/}{Model Rockets:} Built and launched several rockets (30~N$\cdot$s impulse) for yearly MIPT Cosmonautics Day events.
+    \item \href{https://github.com/rezaaliasgarirenani/engineering_projects/tree/main/rover}{Lunar Rover:} Developed a rover prototype capable of obstacle navigation without round wheels.
+    \item \href{https://github.com/rezaaliasgarirenani/engineering_projects/tree/main/aircraft_detection_system}{Detection System:} Built a photoresistor-based tracking system with rotational and translational motion.
+\end{itemize}
+\noindent \href{https://github.com/rezaaliasgarirenani/cubesat_deployer}{\textbf{CubeSat Orbital Deployer}} \hfill \textbf{Mar 2023 -- Aug 2024}
+\begin{itemize}
+    \item Designed SolidWorks 3D models for an orbital deployer and a vibration fixture. Prototypes passed random vibration simulation and mechanical testing on a vibration test stand in the \href{https://mipt.ru/science/labs/laboratoriya-modelirovaniya-mekhanicheskikh-sistem-i-protsessov}{Mechanical Systems Laboratory}.
+\end{itemize}
+
+\noindent \href{https://github.com/rezaaliasgarirenani/phystech_academics/tree/main/non-conservative-electric-fields-and-voltmeters}{\textbf{Non-Conservative Electric Fields and Voltmeters}} \hfill \textbf{May 2022}
+\begin{itemize}
+    \item Designed an experimental setup to analyze the position dependence of voltmeter readings in parallel circuits.
+\end{itemize}
+
+%----------- AWARDS -----------
+\resumesection{Aw}{ards \& Scholarships}
+\begin{itemize}[topsep=0cm, partopsep=0cm]
+    \item{Participant in the \href{https://congress.aero/en/}{5th and 7th Eurasian Aerospace Congresses}} \hfill \textbf{Jul 2023 and Jul 2025}
+    \item M.S. Admission Offers: TUDelft (Mar), MIPT (Jul), Skoltech (Jul) \hfill \textbf{2024}
+    \item MIPT Travel Grant: 15th ICMNE Conference \hfill \textbf{Oct 2023}
+\end{itemize}

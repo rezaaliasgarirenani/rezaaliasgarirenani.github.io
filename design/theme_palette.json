@@ -1,0 +1,18 @@
+{
+  "theme_name": "GitHub Dark Colorblind (Beta)",
+  "reference_extension": "github.github-vscode-theme 6.3.5",
+  "source_of_truth": "src/site.css :root",
+  "colors": {
+    "bg": "#0d1117",
+    "deep": "#010409",
+    "surface": "#161b22",
+    "text": "#c9d1d9",
+    "muted": "#8b949e",
+    "white": "#f0f6fc",
+    "border": "#30363d",
+    "blue": "#58a6ff",
+    "button": "#1f6feb",
+    "cyan": "#39c5cf",
+    "purple": "#bc8cff"
+  }
+}

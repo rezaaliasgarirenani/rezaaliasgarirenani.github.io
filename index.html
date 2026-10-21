@@ -13,226 +13,7 @@
   <meta property="og:title" content="Reza Aliasgari Renani — RTL Design & Applied Physics">
   <meta property="og:description" content="From silicon to space. FPGA design, semiconductor physics, and plasma-based radiation testing.">
   <meta property="og:url" content="https://rezaaliasgarirenani.github.io/">
-  <style>
-    /* Palette: the installed GitHub Dark Colorblind VS Code theme. */
-    :root {
-      --bg:#0d1117; --deep:#010409; --surface:#161b22; --text:#c9d1d9;
-      --muted:#8b949e; --white:#f0f6fc; --border:#30363d; --blue:#58a6ff;
-      --button:#1f6feb; --cyan:#39c5cf; --purple:#bc8cff;
-      --mono:"Cascadia Code","Cascadia Mono",Consolas,monospace;
-      --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    }
-    *,*::before,*::after { box-sizing:border-box; }
-    html { scroll-behavior:smooth; scroll-padding-top:104px; }
-    body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 var(--sans); -webkit-font-smoothing:antialiased; }
-    ::selection { color:var(--white); background:#264f78; }
-    a { color:inherit; text-decoration:none; text-underline-offset:5px; }
-    button { color:inherit; font:inherit; cursor:pointer; }
-    button:focus-visible,a:focus-visible,summary:focus-visible { outline:2px solid var(--blue); outline-offset:6px; }
-    [hidden] { display:none !important; }
-    img,svg { max-width:100%; }
-    h1,h2,h3,p { margin:0; }
-    h1,h2,h3 { color:var(--white); }
-    h2 { font-size:clamp(32px,4vw,48px); line-height:1.15; font-weight:600; letter-spacing:-.04em; }
-    h3 { font-size:23px; line-height:1.3; font-weight:600; letter-spacing:-.025em; }
-    .container { width:min(1200px,calc(100% - 96px)); margin-inline:auto; }
-    .eyebrow { display:block; font:11px/1.6 var(--mono); letter-spacing:.13em; text-transform:uppercase; color:var(--blue); }
-    .arrow { display:inline-block; margin-left:9px; transition:transform .2s; }
-    a:hover .arrow { transform:translate(3px,-2px); }
-    .text-link { color:var(--blue); font-size:14px; }
-    .text-link:hover { text-decoration:underline; }
-    .skip-link { position:fixed; z-index:100; top:10px; left:16px; padding:10px 18px; background:var(--button); color:white; transform:translateY(-160%); }
-    .skip-link:focus { transform:translateY(0); }
-    .utility { background:var(--deep); border-bottom:1px solid #21262d; }
-    .utility-inner { min-height:34px; display:flex; align-items:center; justify-content:space-between; gap:16px; color:var(--muted); font:10px/1.5 var(--mono); letter-spacing:.04em; }
-    .utility a:hover { color:var(--blue); }
-    .utility-label { color:var(--text); }
-    .separator { margin-inline:12px; color:var(--border); }
-    .site-header { position:sticky; top:0; z-index:20; background:#0d1117f5; border-bottom:1px solid var(--border); backdrop-filter:blur(16px); }
-    .header-inner { min-height:79px; display:flex; align-items:center; justify-content:space-between; gap:32px; }
-    .brand { flex-shrink:0; color:var(--white); font-size:33px; font-weight:650; letter-spacing:-.07em; line-height:1; }
-    .brand span { color:var(--blue); }
-    .site-nav { display:flex; align-items:center; gap:29px; }
-    .site-nav a { font-size:13px; color:var(--text); }
-    .site-nav a:hover { color:var(--blue); }
-    .site-nav .cv-link { border-left:1px solid var(--border); padding-left:27px; color:var(--white); }
-    .menu-toggle { display:none; background:transparent; border:1px solid var(--border); border-radius:5px; padding:7px 12px; font:12px var(--mono); }
-    .hero { position:relative; overflow:hidden; isolation:isolate; }
-    #binary-field { position:absolute; z-index:-2; inset:0; width:100%; height:100%; opacity:.53; pointer-events:none; }
-    .hero::after { content:""; position:absolute; z-index:-1; inset:0; background:linear-gradient(90deg,#0d1117ed,#0d1117aa 40%,#0d11172b),linear-gradient(0deg,var(--bg),transparent 28%,transparent 85%,#0d111788); pointer-events:none; }
-    .hero-grid { min-height:640px; padding-block:72px 64px; display:grid; grid-template-columns:1.1fr 1fr; gap:20px; align-items:center; }
-    .hero-copy { position:relative; z-index:1; }
-    .hero .eyebrow { margin-bottom:26px; font-size:10px; }
-    .hero h1 { font-size:clamp(64px,7.5vw,106px); font-weight:600; line-height:1.02; letter-spacing:-.065em; }
-    .hero h1 span { color:var(--blue); }
-    .hero-intro { max-width:470px; margin-top:28px; font-size:17px; line-height:1.75; color:#a8b3bf; }
-    .hero-intro strong { color:var(--white); font-weight:500; }
-    .hero-actions { display:flex; flex-wrap:wrap; align-items:center; gap:13px; margin-top:32px; }
-    .button { display:inline-flex; gap:13px; align-items:center; justify-content:center; min-height:45px; padding:10px 20px; border-radius:5px; background:var(--button); border:1px solid #388bfd; color:#fff; font-size:13px; font-weight:600; transition:background .2s,border-color .2s; }
-    .button:hover { background:var(--button); border-color:var(--blue); box-shadow:0 0 0 3px #58a6ff20; }
-    .button.secondary { color:var(--text); background:#0d1117b3; border-color:var(--border); }
-    .button.secondary:hover { background:var(--surface); border-color:var(--muted); }
-    .hero-figure { margin:0; position:relative; }
-    .hero-figure svg { display:block; width:100%; height:auto; }
-    .hero-figure figcaption { text-align:center; font:9px/1.6 var(--mono); letter-spacing:.1em; color:var(--muted); }
-    .hero-foot { display:flex; justify-content:space-between; gap:24px; align-items:center; padding-bottom:24px; color:var(--muted); font:10px/1.6 var(--mono); }
-    .hero-foot > span { display:flex; gap:10px; align-items:center; }
-    .location-dot { width:5px; height:5px; background:var(--blue); border-radius:50%; display:inline-block; }
-    .motion-toggle { border:none; background:none; padding:8px 0 8px 12px; color:var(--muted); font:10px/1.5 var(--mono); }
-    .motion-toggle:hover { color:var(--white); }
-    .motion-symbol { color:var(--blue); margin-right:8px; }
-    .topic-strip { background:var(--deep); border-block:1px solid var(--border); }
-    .topic-links { display:grid; grid-template-columns:repeat(3,1fr); }
-    .topic-links a { padding:24px 0; display:flex; align-items:center; gap:14px; font:12px/1.5 var(--mono); }
-    .topic-links a + a { border-left:1px solid var(--border); padding-left:30px; }
-    .topic-number { font-size:10px; color:var(--muted); }
-    .topic-links .arrow { margin-left:auto; margin-right:28px; color:var(--blue); }
-    .topic-links a:last-child .arrow { margin-right:0; }
-    .topic-links a:hover { color:var(--white); }
-    .section { padding-block:100px; }
-    .section-head { display:flex; align-items:end; justify-content:space-between; gap:36px; margin-bottom:38px; }
-    .section-head .eyebrow { margin-bottom:15px; }
-    .section-head > p { max-width:360px; color:var(--muted); font-size:14px; }
-    .research-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
-    .research-card { padding:28px; background:var(--surface); border:1px solid var(--border); border-radius:7px; position:relative; overflow:hidden; }
-    .research-card::before { position:absolute; content:""; left:28px; right:28px; top:0; height:1px; background:linear-gradient(90deg,var(--accent),transparent); }
-    .card-top { display:flex; align-items:center; justify-content:space-between; color:var(--muted); font:10px/1.5 var(--mono); }
-    .research-icon { color:var(--accent); width:25px; height:25px; }
-    .research-card h3 { margin-top:40px; font-size:22px; max-width:230px; }
-    .research-card p { font-size:13px; color:#a8b3bf; margin-top:17px; line-height:1.85; }
-    .tags { display:flex; flex-wrap:wrap; gap:7px; margin-top:25px; }
-    .tag { padding:3px 8px; border:1px solid var(--border); border-radius:3px; color:var(--muted); font:9px/1.7 var(--mono); }
-    .research-card details { margin-top:25px; padding-top:18px; border-top:1px solid var(--border); }
-    .research-card summary { color:var(--accent); font:11px/1.6 var(--mono); cursor:pointer; }
-    .research-card details p { margin-top:13px; font-size:12px; }
-    .publications-section { background:var(--deep); border-block:1px solid #21262d; }
-    .publication-toolbar { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px; margin-bottom:24px; }
-    .filter-group { display:flex; gap:7px; }
-    .filter-group button { padding:6px 13px; border:1px solid transparent; border-radius:4px; background:transparent; color:var(--muted); font:11px/1.6 var(--mono); }
-    .filter-group button:hover { color:var(--white); }
-    .filter-group button[aria-pressed="true"] { color:var(--blue); background:#58a6ff12; border-color:#58a6ff4d; }
-    .publication { display:grid; grid-template-columns:80px 1fr 100px; gap:22px; padding-block:27px; border-top:1px solid var(--border); }
-    .pub-year { padding-top:3px; color:var(--muted); font:12px/1.7 var(--mono); }
-    .pub-kind { display:inline-block; color:var(--blue); font:9px/1.6 var(--mono); letter-spacing:.06em; text-transform:uppercase; margin-bottom:9px; }
-    .pub-kind.journal { color:var(--purple); }
-    .pub-kind.presentation { color:var(--cyan); }
-    .publication h3 { font-size:16px; font-weight:500; line-height:1.55; letter-spacing:-.01em; max-width:820px; }
-    .publication h3 a:hover { color:var(--blue); text-decoration:underline; }
-    .pub-authors { margin-top:9px; color:var(--muted); font-size:11px; }
-    .pub-authors strong { color:var(--text); font-weight:500; }
-    .pub-venue { margin-top:5px; color:#a8b3bf; font-size:11px; }
-    .pub-link { justify-self:end; padding-top:3px; white-space:nowrap; font:11px/1.7 var(--mono); color:var(--blue); }
-    .pub-link:hover { text-decoration:underline; }
-    .pub-footer { border-top:1px solid var(--border); padding-top:24px; display:flex; flex-wrap:wrap; gap:24px; }
-    .projects-grid { border-top:1px solid var(--border); }
-    .project { display:grid; grid-template-columns:50px 1fr 1.2fr 28px; gap:28px; align-items:start; padding:31px 5px; border-bottom:1px solid var(--border); transition:background .2s; }
-    .project:hover { background:var(--surface); }
-    .project-index { color:var(--muted); font:11px/1.7 var(--mono); padding-top:4px; }
-    .project h3 { font-size:19px; }
-    .project p { color:#a8b3bf; font-size:13px; }
-    .project .tags { margin-top:11px; }
-    .project .arrow { margin:0; color:var(--blue); font-size:20px; }
-    .about-section { background:var(--surface); border-block:1px solid var(--border); }
-    .about-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:90px; }
-    .about-copy .eyebrow { margin-bottom:15px; }
-    .about-copy > p { margin-top:25px; color:#a8b3bf; font-size:14px; line-height:1.9; }
-    .about-copy > p strong { color:var(--white); font-weight:500; }
-    .about-copy .text-link { display:inline-block; margin-top:24px; }
-    .skills { margin-top:38px; padding-top:25px; border-top:1px solid var(--border); }
-    .skills h3 { font:10px/1.6 var(--mono); text-transform:uppercase; letter-spacing:.1em; color:var(--muted); }
-    .skills .tags { margin-top:15px; }
-    .skills .tag { color:var(--text); font-size:10px; padding:4px 9px; }
-    .timeline-heading { font:10px/1.6 var(--mono); text-transform:uppercase; letter-spacing:.12em; color:var(--muted); margin-bottom:26px; }
-    .timeline-item { position:relative; border-left:1px solid var(--border); padding:0 0 29px 25px; margin-left:4px; }
-    .timeline-item::before { content:""; position:absolute; top:6px; left:-4px; height:7px; width:7px; border-radius:50%; background:var(--blue); outline:5px solid var(--surface); }
-    .timeline-date { font:10px/1.6 var(--mono); color:var(--blue); }
-    .timeline-item h3 { font-size:16px; margin-top:8px; letter-spacing:-.01em; }
-    .timeline-item p { color:#a8b3bf; font-size:12px; margin-top:6px; }
-    .timeline-item a:hover { color:var(--blue); }
-    .timeline-item:last-child { padding-bottom:0; }
-    .education { margin-top:35px; }
-    .education .timeline-item::before { background:var(--purple); }
-    .education .timeline-date { color:var(--purple); }
-    .contact-grid { display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:70px; }
-    .contact-grid .eyebrow { margin-bottom:16px; }
-    .contact-grid h2 { font-size:clamp(38px,4.6vw,60px); }
-    .contact-grid p { margin-top:22px; max-width:400px; font-size:14px; color:var(--muted); }
-    .contact-links { border-top:1px solid var(--border); }
-    .contact-links > a { display:flex; align-items:center; justify-content:space-between; gap:12px; padding-block:20px; border-bottom:1px solid var(--border); color:var(--white); font-size:14px; overflow-wrap:anywhere; }
-    .contact-links > a:hover { color:var(--blue); }
-    .contact-links .arrow { color:var(--blue); flex-shrink:0; }
-    .contact-link-label { display:block; color:var(--muted); font:9px/1.6 var(--mono); letter-spacing:.1em; margin-bottom:4px; text-transform:uppercase; }
-    .site-footer { background:var(--deep); border-top:1px solid var(--border); padding-block:35px 25px; }
-    .footer-top { display:flex; align-items:center; justify-content:space-between; gap:25px; flex-wrap:wrap; }
-    .footer-identity { display:flex; align-items:center; gap:20px; }
-    .footer-identity > span { font-size:10px; color:var(--muted); }
-    .social-links { display:flex; align-items:center; flex-wrap:wrap; gap:22px; font:10px/1.7 var(--mono); color:var(--muted); }
-    .social-links a:hover,.footer-bottom a:hover { color:var(--blue); }
-    .footer-bottom { margin-top:28px; padding-top:20px; border-top:1px solid #21262d; display:flex; justify-content:space-between; gap:20px; font:9px/1.7 var(--mono); color:var(--muted); }
-    @media (min-width:1600px) { .hero-grid { min-height:710px; } }
-    @media (max-width:1050px) {
-      .container { width:calc(100% - 64px); } .site-nav { gap:20px; }
-      .hero-grid { min-height:590px; } .hero h1 { font-size:80px; } .hero-intro { font-size:15px; }
-      .research-card { padding:23px; } .research-card h3 { font-size:20px; }
-      .about-grid { gap:50px; } .project { gap:20px; grid-template-columns:30px 1fr 1.1fr 20px; }
-    }
-    @media (max-width:800px) {
-      .container { width:calc(100% - 48px); }
-      .header-inner { min-height:70px; flex-wrap:wrap; gap:0; } .brand { padding-block:18px; }
-      .site-nav { width:100%; padding-bottom:22px; gap:20px; flex-wrap:wrap; }
-      .site-nav .cv-link { border:0; padding-left:0; }
-      .js .menu-toggle { display:block; } .js .site-nav { display:none; }
-      .js .site-nav.is-open { display:grid; grid-template-columns:1fr 1fr; padding-top:15px; border-top:1px solid var(--border); }
-      .js .site-nav a { padding:6px 0; }
-      .hero-grid { grid-template-columns:1fr .85fr; padding-top:65px; min-height:570px; gap:0; }
-      .hero h1 { font-size:69px; } .hero .eyebrow { font-size:9px; letter-spacing:.1em; }
-      .hero-figure { margin-right:-35px; margin-left:-15px; } .hero-figure figcaption { font-size:7px; }
-      .hero-intro { font-size:14px; } .topic-links a { font-size:10px; gap:10px; }
-      .topic-links a + a { padding-left:18px; } .topic-links .arrow { margin-right:14px; }
-      .section { padding-block:75px; } .section-head { align-items:start; flex-direction:column; gap:20px; }
-      .section-head > p { max-width:470px; } .research-grid { gap:13px; }
-      .research-card { padding:20px; } .research-card h3 { font-size:19px; margin-top:28px; }
-      .research-card p { font-size:12px; } .about-grid { gap:35px; grid-template-columns:1fr 1fr; }
-      .contact-grid { gap:35px; } .contact-links > a { font-size:12px; }
-    }
-    @media (max-width:600px) {
-      html { scroll-padding-top:85px; } .container { width:calc(100% - 40px); }
-      .utility-inner { font-size:8px; min-height:30px; } .utility-detail { display:none; }
-      .hero-grid { grid-template-columns:1fr; padding-block:49px 18px; gap:12px; }
-      .hero .eyebrow { margin-bottom:22px; font-size:8px; } .hero h1 { font-size:clamp(58px,15vw,83px); }
-      .hero-intro { margin-top:22px; font-size:14px; max-width:420px; } .hero-actions { margin-top:25px; gap:10px; }
-      .button { padding:10px 16px; font-size:12px; } .hero-figure { margin:0 auto; width:min(360px,100%); }
-      .hero-figure figcaption { font-size:7px; margin-top:-10px; } .hero-foot { font-size:8px; gap:10px; padding-bottom:18px; }
-      .motion-toggle { font-size:8px; } .topic-links { grid-template-columns:1fr; }
-      .topic-links a { padding:15px 0; font-size:11px; } .topic-links a + a { padding-left:0; border-left:0; border-top:1px solid #21262d; }
-      .topic-links .arrow { margin-right:0; } .section { padding-block:60px; } .section-head { margin-bottom:28px; }
-      .section-head > p { font-size:13px; } .research-grid { grid-template-columns:1fr; gap:16px; }
-      .research-card { padding:26px; } .research-card h3 { font-size:23px; max-width:none; margin-top:22px; }
-      .research-card p { font-size:13px; margin-top:14px; } .research-card .tags { margin-top:20px; }
-      .research-card details { margin-top:21px; } .publication-toolbar { align-items:start; }
-      .publication { grid-template-columns:1fr auto; gap:12px; padding-block:23px; }
-      .pub-year { grid-column:1; grid-row:1; font-size:10px; } .pub-body { grid-column:1/-1; grid-row:2; }
-      .pub-link { grid-column:2; grid-row:1; font-size:10px; } .publication h3 { font-size:15px; }
-      .pub-authors { font-size:10px; } .pub-footer { gap:18px; }
-      .project { grid-template-columns:23px 1fr 20px; gap:15px; padding-block:25px; }
-      .project-heading { grid-column:2; } .project h3 { font-size:18px; }
-      .project > p { grid-column:2; grid-row:2; font-size:12px; } .project > .arrow { grid-column:3; grid-row:1; font-size:18px; }
-      .project .tags { gap:5px; } .project .tag { font-size:8px; }
-      .about-grid { grid-template-columns:1fr; gap:45px; } .about-copy > p { font-size:13px; }
-      .contact-grid { grid-template-columns:1fr; gap:35px; } .contact-links > a { font-size:13px; }
-      .footer-identity { gap:15px; } .footer-identity > span { font-size:9px; }
-      .social-links { gap:19px; font-size:9px; } .footer-bottom { flex-direction:column; gap:9px; font-size:8px; }
-    }
-    @media (prefers-reduced-motion:reduce) {
-      html { scroll-behavior:auto; } *,*::before,*::after { transition:none !important; animation:none !important; }
-    }
-    @media print {
-      body { background:white; color:#222; } h1,h2,h3 { color:#111; } .site-header { position:static; }
-      #binary-field,.hero-figure,.hero-foot,.topic-strip,.filter-group,.menu-toggle { display:none !important; }
-      .section { padding-block:25px; } .container { width:100%; }
-      .hero-grid { min-height:0; display:block; padding-block:25px; } .publication[hidden] { display:grid !important; }
-    }
-  </style>
+  <link rel="stylesheet" href="src/site.css">
 </head>
 <body id="top">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -245,7 +26,7 @@
     <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="main-nav" aria-expanded="false" hidden>Menu <span aria-hidden="true">+</span></button>
     <nav class="site-nav" id="main-nav" aria-label="Main navigation">
       <a href="#research">Research</a><a href="#publications">Publications</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#contact">Contact</a>
-      <a class="cv-link" href="assets/Reza-Aliasgari-Renani-CV.pdf" download>CV <span aria-hidden="true" class="arrow">↗</span></a>
+      <a class="cv-link" href="assets/reza_aliasgari_renani_cv.pdf" download>CV <span aria-hidden="true" class="arrow">↗</span></a>
     </nav>
   </div></header>
   <main id="main">
@@ -255,26 +36,9 @@
         <span class="eyebrow">RTL Design Engineer &amp; Applied Physics Researcher</span>
         <h1 id="hero-title">From silicon<br>to <span>space.</span></h1>
         <p class="hero-intro">I'm <strong>Reza Aliasgari Renani.</strong> I develop FPGA-based systems and study how semiconductor devices behave under radiation and plasma exposure.</p>
-        <div class="hero-actions"><a class="button" href="#research">Explore my research <span aria-hidden="true">↓</span></a><a class="button secondary" href="assets/Reza-Aliasgari-Renani-CV.pdf" download>Download CV <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-actions"><a class="button" href="#research">Explore my research <span aria-hidden="true">↓</span></a><a class="button secondary" href="assets/reza_aliasgari_renani_cv.pdf" download>Download CV <span aria-hidden="true">↗</span></a></div>
       </div><figure class="hero-figure">
-        <svg viewBox="0 0 520 470" role="img" aria-labelledby="chip-title chip-desc" xmlns="http://www.w3.org/2000/svg">
-          <title id="chip-title">Programmable logic meets space-environment research</title><desc id="chip-desc">A schematic FPGA chip with circuit traces and orbital paths connects digital hardware design to radiation experiments.</desc>
-          <defs>
-            <pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse"><path d="M26 0H0v26" fill="none" stroke="#30363d" stroke-width=".5"/></pattern>
-            <linearGradient id="chip-fill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1c2d43"/><stop offset="1" stop-color="#0d1117"/></linearGradient>
-            <radialGradient id="halo"><stop stop-color="#1f6feb" stop-opacity=".18"/><stop offset="1" stop-color="#1f6feb" stop-opacity="0"/></radialGradient>
-            <pattern id="logic-cells" width="16" height="16" patternUnits="userSpaceOnUse"><rect x="2" y="2" width="11" height="11" rx="1" fill="#58a6ff" fill-opacity=".09" stroke="#58a6ff" stroke-opacity=".25" stroke-width=".5"/></pattern>
-          </defs>
-          <circle cx="265" cy="230" r="220" fill="url(#halo)"/><rect x="26" y="22" width="468" height="416" fill="url(#grid)" opacity=".42"/>
-          <g fill="none" stroke="#30363d" stroke-width="1"><circle cx="260" cy="226" r="171" stroke-dasharray="3 7"/><ellipse cx="260" cy="226" rx="220" ry="93" transform="rotate(-32 260 226)"/><ellipse cx="260" cy="226" rx="206" ry="114" transform="rotate(39 260 226)"/><path d="M26 48V22h26M468 22h26v26M494 412v26h-26M52 438H26v-26" stroke="#58a6ff" stroke-opacity=".5"/></g>
-          <g fill="none" stroke="#58a6ff" stroke-opacity=".55" stroke-width="1.2"><path d="M151 197H96l-25-25H43M151 214H67M151 247H95l-34 34H36M151 264H110v67H62M369 197h42l32-32h36M369 214h95M369 247h41l31 31h42M369 264h20v66h62M223 117V76l-21-21M241 117V46M278 117V76l27-27M296 117V93h49M223 335v34l-20 20v32M241 335v76M278 335v49l26 26M296 335v26h48"/></g>
-          <g fill="#0d1117" stroke="#58a6ff" stroke-width="1.3"><circle cx="43" cy="172" r="3"/><circle cx="67" cy="214" r="3"/><circle cx="36" cy="281" r="3"/><circle cx="62" cy="331" r="3"/><circle cx="479" cy="165" r="3"/><circle cx="464" cy="214" r="3"/><circle cx="483" cy="278" r="3"/><circle cx="451" cy="330" r="3"/><circle cx="202" cy="55" r="3"/><circle cx="241" cy="46" r="3"/><circle cx="305" cy="49" r="3"/><circle cx="345" cy="93" r="3"/><circle cx="203" cy="421" r="3"/><circle cx="241" cy="411" r="3"/><circle cx="304" cy="410" r="3"/><circle cx="344" cy="361" r="3"/></g>
-          <g fill="#1c2c40" stroke="#58a6ff" stroke-opacity=".6"><path d="M180 128v-18h12v18m12 0v-18h12v18m12 0v-18h12v18m12 0v-18h12v18m12 0v-18h12v18m12 0v-18h12v18m12 0v-18h12v18M180 324v18h12v-18m12 0v18h12v-18m12 0v18h12v-18m12 0v18h12v-18m12 0v18h12v-18m12 0v18h12v-18m12 0v18h12v-18M162 151h-18v12h18m0 12h-18v12h18m0 12h-18v12h18m0 12h-18v12h18m0 12h-18v12h18m0 12h-18v12h18m0 12h-18v12h18M358 151h18v12h-18m0 12h18v12h-18m0 12h18v12h-18m0 12h18v12h-18m0 12h18v12h-18m0 12h18v12h-18m0 12h18v12h-18"/></g>
-          <rect x="160" y="126" width="200" height="200" rx="12" fill="url(#chip-fill)" stroke="#58a6ff" stroke-opacity=".65"/><rect x="173" y="139" width="174" height="174" rx="6" fill="none" stroke="#58a6ff" stroke-opacity=".18"/><rect x="188" y="154" width="144" height="144" fill="url(#logic-cells)"/><rect x="203" y="195" width="114" height="63" rx="4" fill="#0d1117" stroke="#58a6ff" stroke-opacity=".4"/>
-          <text x="260" y="222" fill="#f0f6fc" font-size="24" font-family="Consolas,monospace" text-anchor="middle" letter-spacing="4">FPGA</text><text x="260" y="243" fill="#58a6ff" font-size="8" font-family="Consolas,monospace" text-anchor="middle" letter-spacing="1.5">PROGRAMMABLE LOGIC</text>
-          <circle cx="179" cy="145" r="3" fill="#58a6ff"/><circle cx="419" cy="99" r="5" fill="#39c5cf"/><circle cx="90" cy="359" r="4" fill="#bc8cff"/><path d="M419 99l23-25h42M90 359l-24 24H32" fill="none" stroke="#8b949e" stroke-width=".7"/>
-          <g font-family="Consolas,monospace" font-size="8" letter-spacing="1.1"><text x="341" y="62" fill="#39c5cf">SPACE ENVIRONMENTS</text><text x="32" y="402" fill="#bc8cff">DEVICE PHYSICS</text><text x="180" y="375" fill="#8b949e">RTL → HARDWARE</text><text x="35" y="40" fill="#6e7681">01 / SYSTEM VIEW</text><text x="417" y="425" fill="#6e7681">SCHEMATIC</text></g>
-        </svg><figcaption>DIGITAL HARDWARE &nbsp; / &nbsp; EXPERIMENTAL PHYSICS</figcaption>
+        <img src="assets/graphics/fpga_schematic.svg" width="520" height="470" alt="Schematic FPGA chip with circuit traces and orbital paths connecting digital hardware design to radiation experiments."><figcaption>DIGITAL HARDWARE &nbsp; / &nbsp; EXPERIMENTAL PHYSICS</figcaption>
       </figure></div>
       <div class="container hero-foot"><span><i class="location-dot" aria-hidden="true"></i> Moscow, Russia <span aria-hidden="true">/</span> MIPT · Phystech</span><button class="motion-toggle" type="button" aria-label="Pause animation" hidden><span class="motion-symbol" aria-hidden="true">Ⅱ</span><span class="motion-label">Pause binary motion</span></button></div>
     </section>
@@ -288,19 +52,19 @@
       <div class="section-head"><div><span class="eyebrow">01 / What I investigate</span><h2 id="research-title">Research, across scales.</h2></div><p>From the logic inside a chip to the environments around it. My work connects digital design with experimental physics.</p></div>
       <div class="research-grid">
         <article class="research-card" id="digital-design" style="--accent:var(--blue)">
-          <div class="card-top"><span>01 / DIGITAL DESIGN</span><svg class="research-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M8 1v4m4-4v4m4-4v4M8 19v4m4-4v4m4-4v4M1 8h4m-4 4h4m-4 4h4M19 8h4m-4 4h4m-4 4h4"/></svg></div>
+          <div class="card-top"><span>01 / DIGITAL DESIGN</span><img class="research-icon" src="assets/graphics/digital_design.svg" width="25" height="25" alt=""></div>
           <h3>Algorithms into hardware.</h3><p>Fixed-point DSP and FPGA image processing, from manual Verilog and Simulink-generated HDL to simulation, synthesis, and board-level verification.</p>
           <div class="tags"><span class="tag">Verilog / SystemVerilog</span><span class="tag">FPGA</span><span class="tag">Image processing</span></div>
           <details><summary>Methods &amp; tools</summary><p>AXI and AXI4-Stream testbenches; Python and cocotb verification; Vivado synthesis. Pipelines include demosaicing, Sobel operators, rgb2hsv, tone mapping, distortion correction, and resizing.</p></details>
         </article>
         <article class="research-card" id="semiconductor-physics" style="--accent:var(--purple)">
-          <div class="card-top"><span>02 / DEVICE PHYSICS</span><svg class="research-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M2 7h20M2 12h20M2 17h20M7 3v4m10 10v4"/><circle cx="7" cy="12" r="2.2" fill="#161b22"/><circle cx="17" cy="12" r="2.2" fill="#161b22"/></svg></div>
+          <div class="card-top"><span>02 / DEVICE PHYSICS</span><img class="research-icon" src="assets/graphics/device_physics.svg" width="25" height="25" alt=""></div>
           <h3>Understanding radiation effects.</h3><p>Electrical characterization of irradiated MOS structures. I use capacitance–voltage and thermally stimulated current measurements to investigate electrically active defects.</p>
           <div class="tags"><span class="tag">MOS devices</span><span class="tag">C–V / TSC</span><span class="tag">MATLAB automation</span></div>
           <details><summary>Methods &amp; tools</summary><p>Low-energy electron and gamma irradiation; measurements over 80–400 K; trap analysis and interface-state characterization. Instrument automation with Keithley, Keysight, Lakeshore, and Zurich Instruments equipment.</p></details>
         </article>
         <article class="research-card" id="plasma-systems" style="--accent:var(--cyan)">
-          <div class="card-top"><span>03 / PLASMA &amp; SPACE</span><svg class="research-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="12" cy="12" r="7"/><ellipse cx="12" cy="12" rx="11" ry="4" transform="rotate(-35 12 12)"/><circle cx="19" cy="6" r="2" fill="#161b22"/><path d="m10 9 4 3-4 3"/></svg></div>
+          <div class="card-top"><span>03 / PLASMA &amp; SPACE</span><img class="research-icon" src="assets/graphics/plasma_space.svg" width="25" height="25" alt=""></div>
           <h3>Testing beyond the lab bench.</h3><p>Electron-beam plasma facilities for simulating space-flight conditions, investigating FPGA reliability under irradiation, thermal cycling, and surface charging.</p>
           <div class="tags"><span class="tag">Electron-beam plasma</span><span class="tag">Radiation testing</span><span class="tag">Space environments</span></div>
           <details><summary>Experimental conditions</summary><p>Electron beams of 25–60 keV, up to 100 mA, in low-pressure oxygen atmospheres. Combined thermal cycling over 218–393 K and surface charging to study FPGA behavior.</p></details>
@@ -335,7 +99,7 @@
     <section class="section about-section" id="about" aria-labelledby="about-title"><div class="container about-grid">
       <div class="about-copy"><span class="eyebrow">04 / A little background</span><h2 id="about-title">An experimentalist.<br>A hardware builder.</h2>
         <p>I'm a researcher in electronics and applied physics, based in Moscow. My background at the <strong>Moscow Institute of Physics and Technology (MIPT)</strong> spans aerospace engineering, semiconductor devices, and plasma systems.</p><p>I work across the full experiment: designing digital logic, building verification tools, automating instruments, and interpreting measurements. I enjoy the point where a mathematical model meets a physical device.</p>
-        <a class="text-link" href="assets/Reza-Aliasgari-Renani-CV.pdf" download>Download my full CV <span class="arrow" aria-hidden="true">↗</span></a>
+        <a class="text-link" href="assets/reza_aliasgari_renani_cv.pdf" download>Download my full CV <span class="arrow" aria-hidden="true">↗</span></a>
         <div class="skills"><h3>My working toolkit</h3><div class="tags"><span class="tag">Verilog</span><span class="tag">SystemVerilog</span><span class="tag">MATLAB</span><span class="tag">Simulink</span><span class="tag">Python</span><span class="tag">cocotb</span><span class="tag">Vivado</span><span class="tag">SciPy</span><span class="tag">OpenCV</span><span class="tag">Git</span><span class="tag">Linux</span><span class="tag">LaTeX</span></div></div>
       </div><div><h3 class="timeline-heading">Research experience</h3><div class="timeline">
         <article class="timeline-item"><span class="timeline-date">2024 — Present</span><h3>Programmer / RTL Design Engineer</h3><p><a href="http://ai.mipt.ru/design-center">Laboratory of Software and System-on-Chip Development, MIPT</a></p><p>FPGA image processing, verification, and electron-beam plasma exposure experiments.</p></article>
@@ -355,105 +119,8 @@
     <div class="footer-top"><div class="footer-identity"><a class="brand" href="#top" aria-label="Reza — back to top">reza<span>.</span></a><span>Reza Aliasgari Renani<br>RTL Design · Semiconductor Physics · Plasma Systems</span></div><nav class="social-links" aria-label="Academic and professional profiles"><a href="https://github.com/rezaaliasgarirenani">GitHub</a><a href="https://scholar.google.com/citations?user=L9Vv3C8AAAAJ&amp;hl=en">Scholar</a><a href="https://orcid.org/0009-0000-8983-755X">ORCID</a><a href="https://www.researchgate.net/profile/Reza-Aliasgari-Renani">ResearchGate</a></nav></div>
     <div class="footer-bottom"><span>© 2026 Reza Aliasgari Renani</span><span><a href="https://github.com/rezaaliasgarirenani/rezaaliasgarirenani.github.io">Website source ↗</a><span class="separator">/</span><a href="#top">Back to top ↑</a></span></div>
   </div></footer>
-  <script>
-    (() => {
-      'use strict';
-      document.documentElement.classList.add('js');
-      // Without JavaScript the full navigation and all publications remain visible.
-      const menu = document.querySelector('.menu-toggle');
-      const nav = document.querySelector('#main-nav');
-      menu.hidden = false;
-      const closeMenu = () => {
-        nav.classList.remove('is-open');
-        menu.setAttribute('aria-expanded', 'false');
-        menu.setAttribute('aria-label', 'Open menu');
-        menu.querySelector('span').textContent = '+';
-      };
-      menu.addEventListener('click', () => {
-        const open = nav.classList.toggle('is-open');
-        menu.setAttribute('aria-expanded', String(open));
-        menu.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-        menu.querySelector('span').textContent = open ? '−' : '+';
-      });
-      nav.addEventListener('click', event => { if (event.target.closest('a')) closeMenu(); });
-      document.addEventListener('keydown', event => {
-        if (event.key === 'Escape' && nav.classList.contains('is-open')) { closeMenu(); menu.focus(); }
-      });
-      document.addEventListener('click', event => { if (!event.target.closest('.site-header')) closeMenu(); });
-      window.matchMedia('(min-width:801px)').addEventListener('change', closeMenu);
-      const filters = document.querySelector('.filter-group');
-      const papers = [...document.querySelectorAll('.publication')];
-      const count = document.querySelector('#publication-count');
-      filters.hidden = false;
-      filters.addEventListener('click', event => {
-        const button = event.target.closest('button[data-filter]');
-        if (!button) return;
-        filters.querySelectorAll('button').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-        const kind = button.dataset.filter;
-        let visible = 0;
-        papers.forEach(paper => { paper.hidden = kind !== 'all' && paper.dataset.kind !== kind; if (!paper.hidden) visible++; });
-        count.textContent = kind === 'all' ? '6 contributions / 2023–2026' : `${visible} ${kind === 'journal' ? 'journal article' : 'conference contributions'}`;
-      });
-      // Local binary rain: no animation library, external requests, or tracking.
-      const canvas = document.querySelector('#binary-field');
-      const ctx = canvas.getContext('2d');
-      const motion = document.querySelector('.motion-toggle');
-      if (!ctx) return;
-      const reducedMotion = window.matchMedia('(prefers-reduced-motion:reduce)');
-      let enabled = !reducedMotion.matches;
-      let inView = true, animation = 0, previousFrame = 0, width = 0, height = 0, columns = [];
-      const setMotionLabel = () => {
-        motion.setAttribute('aria-label', enabled ? 'Pause animation' : 'Play animation');
-        motion.querySelector('.motion-symbol').textContent = enabled ? 'Ⅱ' : '▷';
-        motion.querySelector('.motion-label').textContent = enabled ? 'Pause binary motion' : 'Play binary motion';
-      };
-      const draw = advance => {
-        ctx.clearRect(0, 0, width, height);
-        ctx.font = '11px Consolas, monospace';
-        columns.forEach((column, index) => {
-          if (advance) {
-            column.y += column.speed;
-            if (column.y > height + column.length * 22) column.y = -22;
-            if (Math.random() < .13) column.bits[Math.floor(Math.random() * column.bits.length)] = Math.random() > .5 ? '1' : '0';
-          }
-          for (let row = 0; row < column.length; row++) {
-            const y = column.y - row * 22;
-            if (y < 0 || y > height) continue;
-            ctx.fillStyle = `rgba(88,166,255,${(1 - row / column.length) * (index % 4 === 0 ? .55 : .27)})`;
-            ctx.fillText(column.bits[row], index * 22 + 7, y);
-          }
-        });
-      };
-      const resize = () => {
-        const bounds = canvas.getBoundingClientRect();
-        width = bounds.width; height = bounds.height;
-        const scale = Math.min(window.devicePixelRatio || 1, 2);
-        canvas.width = Math.round(width * scale); canvas.height = Math.round(height * scale);
-        ctx.setTransform(scale, 0, 0, scale, 0, 0);
-        columns = Array.from({ length: Math.ceil(width / 22) }, () => {
-          const length = 9 + Math.floor(Math.random() * 18);
-          return { y: Math.random() * (height + 300), speed: 1 + Math.random() * 2.5, length, bits: Array.from({ length }, () => Math.random() > .5 ? '1' : '0') };
-        });
-        draw(false);
-      };
-      const frame = time => {
-        animation = 0;
-        if (!enabled || document.hidden || !inView) return;
-        if (time - previousFrame > 65) { draw(true); previousFrame = time; }
-        animation = window.requestAnimationFrame(frame);
-      };
-      const sync = () => {
-        window.cancelAnimationFrame(animation); animation = 0;
-        if (enabled && !document.hidden && inView) animation = window.requestAnimationFrame(frame);
-      };
-      motion.hidden = false;
-      motion.addEventListener('click', () => { enabled = !enabled; setMotionLabel(); sync(); });
-      reducedMotion.addEventListener('change', () => { enabled = !reducedMotion.matches; setMotionLabel(); sync(); });
-      document.addEventListener('visibilitychange', sync);
-      new IntersectionObserver(entries => { inView = entries[0].isIntersecting; sync(); }).observe(canvas);
-      new ResizeObserver(resize).observe(canvas);
-      resize(); setMotionLabel(); sync();
-    })();
-  </script>
+  <script src="src/navigation.js" defer></script>
+  <script src="src/publication_filters.js" defer></script>
+  <script src="src/binary_background.js" defer></script>
 </body>
 </html>
