@@ -12,7 +12,7 @@ Plain HTML, CSS, JavaScript, and original SVG graphics. Colors follow the GitHub
 - `src/navigation.js` — mobile navigation.
 - `assets/graphics/` — editable graphics used by the site.
 - `assets/chip_radiation_logo.png` — supplied logo used in the header, footer, and browser tab.
-- `assets/reza_aliasgari_renani_cv.pdf` — downloadable CV.
+- `assets/reza_aliasgari_renani_cv.pdf` — CV PDF, opened in a new browser tab.
 - `documents/cv/` — original LaTeX sources for the CV.
 
 ## Preview and publish
