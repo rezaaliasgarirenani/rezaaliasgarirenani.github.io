@@ -11,7 +11,7 @@ Plain HTML, CSS, JavaScript, and original SVG graphics. Colors follow the GitHub
 - `src/binary_background.js` — the original animated binary background.
 - `src/navigation.js` — mobile navigation.
 - `assets/graphics/` — editable graphics used by the site.
-- `assets/chip_radiation_logo.png` — supplied logo used for the browser tab.
+- `assets/chip_radiation_logo.png` — supplied logo used in the header, footer, and browser tab.
 - `assets/reza_aliasgari_renani_cv.pdf` — downloadable CV.
 - `documents/cv/` — original LaTeX sources for the CV.
 

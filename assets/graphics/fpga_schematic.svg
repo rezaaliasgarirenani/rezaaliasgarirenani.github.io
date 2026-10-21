@@ -1,65 +1,31 @@
-<?xml version="1.0" ?>
+<?xml version='1.0' encoding='utf-8'?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 470" role="img" aria-labelledby="chip-title chip-desc">
   <title id="chip-title">Programmable logic meets space-environment research</title>
-  <desc id="chip-desc">A schematic FPGA chip with circuit traces and orbital paths connects digital hardware design to radiation experiments.</desc>
+  <desc id="chip-desc">An FPGA chip surrounded by labels for digital hardware, device physics, and space-environment research.</desc>
   <defs>
-    <pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse">
-      <path d="M26 0H0v26" fill="none" stroke="#30363d" stroke-width=".5"/>
-    </pattern>
     <linearGradient id="chip-fill" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#1c2d43"/>
-      <stop offset="1" stop-color="#0d1117"/>
+      <stop stop-color="#1c2d43" />
+      <stop offset="1" stop-color="#0d1117" />
     </linearGradient>
     <radialGradient id="halo">
-      <stop stop-color="#1f6feb" stop-opacity=".18"/>
-      <stop offset="1" stop-color="#1f6feb" stop-opacity="0"/>
+      <stop stop-color="#1f6feb" stop-opacity=".18" />
+      <stop offset="1" stop-color="#1f6feb" stop-opacity="0" />
     </radialGradient>
     <pattern id="logic-cells" width="16" height="16" patternUnits="userSpaceOnUse">
-      <rect x="2" y="2" width="11" height="11" rx="1" fill="#58a6ff" fill-opacity=".09" stroke="#58a6ff" stroke-opacity=".25" stroke-width=".5"/>
+      <rect x="2" y="2" width="11" height="11" rx="1" fill="#58a6ff" fill-opacity=".09" stroke="#58a6ff" stroke-opacity=".25" stroke-width=".5" />
     </pattern>
   </defs>
-  <circle cx="265" cy="230" r="220" fill="url(#halo)"/>
-  <rect x="26" y="22" width="468" height="416" fill="url(#grid)" opacity=".42"/>
-  <g fill="none" stroke="#30363d" stroke-width="1">
-    <circle cx="260" cy="226" r="171" stroke-dasharray="3 7"/>
-    <ellipse cx="260" cy="226" rx="220" ry="93" transform="rotate(-32 260 226)"/>
-    <ellipse cx="260" cy="226" rx="206" ry="114" transform="rotate(39 260 226)"/>
-    <path d="M26 48V22h26M468 22h26v26M494 412v26h-26M52 438H26v-26" stroke="#58a6ff" stroke-opacity=".5"/>
-  </g>
-  <g fill="none" stroke="#58a6ff" stroke-opacity=".55" stroke-width="1.2">
-    <path d="M151 197H96l-25-25H43M151 214H67M151 247H95l-34 34H36M151 264H110v67H62M369 197h42l32-32h36M369 214h95M369 247h41l31 31h42M369 264h20v66h62M223 117V76l-21-21M241 117V46M278 117V76l27-27M296 117V93h49M223 335v34l-20 20v32M241 335v76M278 335v49l26 26M296 335v26h48"/>
-  </g>
-  <g fill="#0d1117" stroke="#58a6ff" stroke-width="1.3">
-    <circle cx="43" cy="172" r="3"/>
-    <circle cx="67" cy="214" r="3"/>
-    <circle cx="36" cy="281" r="3"/>
-    <circle cx="62" cy="331" r="3"/>
-    <circle cx="479" cy="165" r="3"/>
-    <circle cx="464" cy="214" r="3"/>
-    <circle cx="483" cy="278" r="3"/>
-    <circle cx="451" cy="330" r="3"/>
-    <circle cx="202" cy="55" r="3"/>
-    <circle cx="241" cy="46" r="3"/>
-    <circle cx="305" cy="49" r="3"/>
-    <circle cx="345" cy="93" r="3"/>
-    <circle cx="203" cy="421" r="3"/>
-    <circle cx="241" cy="411" r="3"/>
-    <circle cx="304" cy="410" r="3"/>
-    <circle cx="344" cy="361" r="3"/>
-  </g>
+  <circle cx="265" cy="230" r="220" fill="url(#halo)" />
   <g fill="#1c2c40" stroke="#58a6ff" stroke-opacity=".6">
-    <path d="M180 128v-18h12v18m12 0v-18h12v18m12 0v-18h12v18m12 0v-18h12v18m12 0v-18h12v18m12 0v-18h12v18m12 0v-18h12v18M180 324v18h12v-18m12 0v18h12v-18m12 0v18h12v-18m12 0v18h12v-18m12 0v18h12v-18m12 0v18h12v-18m12 0v18h12v-18M162 151h-18v12h18m0 12h-18v12h18m0 12h-18v12h18m0 12h-18v12h18m0 12h-18v12h18m0 12h-18v12h18m0 12h-18v12h18M358 151h18v12h-18m0 12h18v12h-18m0 12h18v12h-18m0 12h18v12h-18m0 12h18v12h-18m0 12h18v12h-18m0 12h18v12h-18"/>
+    <path d="M180 128v-18h12v18m12 0v-18h12v18m12 0v-18h12v18m12 0v-18h12v18m12 0v-18h12v18m12 0v-18h12v18m12 0v-18h12v18M180 324v18h12v-18m12 0v18h12v-18m12 0v18h12v-18m12 0v18h12v-18m12 0v18h12v-18m12 0v18h12v-18m12 0v18h12v-18M162 151h-18v12h18m0 12h-18v12h18m0 12h-18v12h18m0 12h-18v12h18m0 12h-18v12h18m0 12h-18v12h18m0 12h-18v12h18M358 151h18v12h-18m0 12h18v12h-18m0 12h18v12h-18m0 12h18v12h-18m0 12h18v12h-18m0 12h18v12h-18m0 12h18v12h-18" />
   </g>
-  <rect x="160" y="126" width="200" height="200" rx="12" fill="url(#chip-fill)" stroke="#58a6ff" stroke-opacity=".65"/>
-  <rect x="173" y="139" width="174" height="174" rx="6" fill="none" stroke="#58a6ff" stroke-opacity=".18"/>
-  <rect x="188" y="154" width="144" height="144" fill="url(#logic-cells)"/>
-  <rect x="203" y="195" width="114" height="63" rx="4" fill="#0d1117" stroke="#58a6ff" stroke-opacity=".4"/>
+  <rect x="160" y="126" width="200" height="200" rx="12" fill="url(#chip-fill)" stroke="#58a6ff" stroke-opacity=".65" />
+  <rect x="173" y="139" width="174" height="174" rx="6" fill="none" stroke="#58a6ff" stroke-opacity=".18" />
+  <rect x="188" y="154" width="144" height="144" fill="url(#logic-cells)" />
+  <rect x="203" y="195" width="114" height="63" rx="4" fill="#0d1117" stroke="#58a6ff" stroke-opacity=".4" />
   <text x="260" y="222" fill="#f0f6fc" font-size="24" font-family="Consolas,monospace" text-anchor="middle" letter-spacing="4">FPGA</text>
   <text x="260" y="243" fill="#58a6ff" font-size="8" font-family="Consolas,monospace" text-anchor="middle" letter-spacing="1.5">PROGRAMMABLE LOGIC</text>
-  <circle cx="179" cy="145" r="3" fill="#58a6ff"/>
-  <circle cx="419" cy="99" r="5" fill="#39c5cf"/>
-  <circle cx="90" cy="359" r="4" fill="#bc8cff"/>
-  <path d="M419 99l23-25h42M90 359l-24 24H32" fill="none" stroke="#8b949e" stroke-width=".7"/>
+  <circle cx="179" cy="145" r="3" fill="#58a6ff" />
   <g font-family="Consolas,monospace" font-size="8" letter-spacing="1.1">
     <text x="341" y="62" fill="#39c5cf">SPACE ENVIRONMENTS</text>
     <text x="32" y="402" fill="#bc8cff">DEVICE PHYSICS</text>
