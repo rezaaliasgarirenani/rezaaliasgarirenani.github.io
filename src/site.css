@@ -109,6 +109,8 @@ a:hover .arrow { transform:translate(3px,-2px); }
 .pub-footer { border-top:1px solid var(--border); padding-top:24px; display:flex; flex-wrap:wrap; gap:24px; }
 .about-section { background:var(--surface); border-block:1px solid var(--border); }
 .about-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:90px; }
+.about-intro { display:flex; align-items:center; gap:clamp(16px,2vw,24px); }
+.about-portrait { display:block; width:clamp(80px,10vw,128px); height:auto; aspect-ratio:1; flex-shrink:0; object-fit:cover; border:1px solid var(--border); border-radius:50%; }
 .about-copy > p { margin-top:25px; color:#a8b3bf; font-size:14px; line-height:1.9; }
 .about-copy > p strong { color:var(--white); font-weight:500; }
 .about-copy .text-link { display:inline-block; margin-top:24px; }
