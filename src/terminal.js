@@ -1,6 +1,9 @@
 (() => {
   'use strict';
 
+  // Change this value to adjust the pause between consecutive output lines.
+  const LINE_DELAY_MS = 120;
+
   const terminal = document.querySelector('[data-terminal]');
   if (!terminal) return;
 
@@ -27,7 +30,7 @@
       showAll();
       return;
     }
-    timer = window.setTimeout(reveal, Math.min(55, 1800 / lines.length));
+    timer = window.setTimeout(reveal, LINE_DELAY_MS);
   };
 
   terminal.classList.add('is-revealing');

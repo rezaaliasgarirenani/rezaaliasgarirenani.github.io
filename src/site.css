@@ -1,7 +1,7 @@
 :root {
   color-scheme: dark;
   --background: rgb(0, 0, 0);
-  --foreground: rgb(200, 200, 200);
+  --foreground: rgb(225, 225, 225);
   --rule: #363636;
   --mono: "Cascadia Code", "Cascadia Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
@@ -30,7 +30,9 @@ img { display: block; max-width: 100%; }
 .skip-link:focus { transform: none; }
 
 .site-header { border-bottom: 1px solid var(--rule); }
-.site-nav { display: grid; grid-template-columns: 1fr 72px 1fr; align-items: center; gap: 40px; max-width: 690px; margin: auto; padding-block: 25px; }
+.header-inner { display: grid; grid-template-columns: 48px minmax(0, 1fr) 48px; align-items: center; gap: 24px; }
+.chip-logo { width: 48px; height: 48px; object-fit: contain; }
+.site-nav { display: grid; grid-template-columns: 1fr 72px 1fr; align-items: center; gap: 32px; width: min(100%, 690px); margin: auto; padding-block: 25px; }
 .nav-group { display: flex; align-items: center; gap: 28px; }
 .nav-left { justify-content: flex-end; }
 .nav-right { justify-content: flex-start; }
@@ -49,12 +51,23 @@ main:focus { outline: none; }
 .page-intro > .path { margin-bottom: 15px; }
 .terminal .page-intro { margin-top: 17px; margin-bottom: 32px; }
 h1 { font-size: clamp(23px, 3.4vw, 33px); line-height: 1.4; letter-spacing: -.035em; }
-.motto { margin-top: 5px; font-size: 12px; font-weight: 400; }
+.home-name { text-align: center; }
+.contact-directory { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px; margin-block: 34px; padding-bottom: 30px; border-bottom: 1px solid var(--rule); }
+.contact-column { min-width: 0; }
+.contact-column .section-heading { margin-bottom: 17px; font-size: 12px; }
+.contact-list { display: grid; gap: 12px; padding: 0; list-style: none; }
+.contact-link { display: flex; align-items: flex-start; gap: 10px; width: fit-content; max-width: 100%; text-decoration: none; }
+.contact-icon { width: 18px; height: 18px; flex-shrink: 0; margin-top: 3px; filter: brightness(0) invert(.882353); }
+.contact-text { display: grid; min-width: 0; }
+.contact-label { font-size: 12px; }
+.contact-value { font-size: 10px; overflow-wrap: anywhere; }
+.contact-link:hover .contact-label, .contact-link:focus-visible .contact-label { text-decoration: underline; text-underline-offset: 4px; }
 .page-summary { margin-top: 11px; max-width: 740px; }
 .section-heading { font-size: 14px; line-height: 1.7; margin-bottom: 20px; }
 .prompt { display: inline-block; margin-right: 5px; }
 .record-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 44px; row-gap: 8px; }
-.record-line { display: grid; grid-template-columns: 118px minmax(0, 1fr); align-items: baseline; gap: 10px; }
+.record-column { display: grid; gap: 8px; align-content: start; }
+.record-line { display: grid; grid-template-columns: 136px minmax(0, 1fr); align-items: baseline; gap: 10px; }
 .record-line dt { white-space: nowrap; }
 .record-line dd { overflow-wrap: anywhere; }
 .record-line dd a { text-decoration-color: #6b6b6b; }
@@ -71,14 +84,11 @@ h1 { font-size: clamp(23px, 3.4vw, 33px); line-height: 1.4; letter-spacing: -.03
 .timeline-entry a { text-decoration-color: #6b6b6b; }
 .timeline-location { font-size: 11px !important; }
 .timeline-entry .thesis { margin-top: 10px; font-size: 11px; line-height: 1.85; }
-.terminal-end { margin-top: 32px; font-size: 11px; }
-.cursor { display: inline-block; margin-left: 8px; }
 .terminal.is-revealing [data-line]:not(.is-visible) { visibility: hidden; }
 
 .document-section { padding-block: 28px; border-top: 1px solid var(--rule); }
 .research-points { padding-left: 22px; max-width: 920px; }
 .research-points li + li { margin-top: 17px; }
-.document-note { margin-top: 24px; font-size: 12px; }
 .publication-list { padding-left: 28px; }
 .publication { padding-left: 8px; }
 .publication + .publication { margin-top: 28px; }
@@ -94,19 +104,22 @@ h1 { font-size: clamp(23px, 3.4vw, 33px); line-height: 1.4; letter-spacing: -.03
 .skill-list li + li { margin-top: 6px; }
 .contact-record { display: grid; gap: 12px; }
 .contact-record .record-line { grid-template-columns: 150px minmax(0, 1fr); }
-.profile-links { display: flex; flex-wrap: wrap; gap: 12px 25px; }
-.site-footer { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; border-top: 1px solid var(--rule); padding-block: 22px; font-size: 11px; }
-.site-footer > div { display: flex; flex-wrap: wrap; gap: 20px; }
+.site-footer { display: grid; grid-template-columns: 48px minmax(0, 1fr) 48px; align-items: center; gap: 24px; border-top: 1px solid var(--rule); padding-block: 22px; font-size: 11px; }
+.footer-content { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; }
+.footer-content p { text-align: right; }
 .site-footer a { text-decoration: none; }
 .site-footer a:hover { text-decoration: underline; }
 
 @media (max-width: 900px) {
-  .record-grid { grid-template-columns: 1fr; }
   .timeline-grid { gap: 38px; }
+  .contact-directory { gap: 22px; }
+  .record-line { grid-template-columns: 126px minmax(0, 1fr); }
 }
 @media (max-width: 680px) {
   .container { width: calc(100% - 40px); }
-  .site-nav { grid-template-columns: 1fr 64px 1fr; gap: 24px; padding-block: 20px; }
+  .header-inner { grid-template-columns: 30px minmax(0, 1fr) 30px; gap: 12px; }
+  .chip-logo { width: 30px; height: 30px; }
+  .site-nav { grid-template-columns: 1fr 64px 1fr; gap: 12px; padding-block: 20px; }
   .portrait-link { width: 64px; height: 64px; }
   .nav-group { flex-direction: column; gap: 0; }
   .nav-left { align-items: flex-end; }
@@ -114,16 +127,29 @@ h1 { font-size: clamp(23px, 3.4vw, 33px); line-height: 1.4; letter-spacing: -.03
   .nav-group a { padding-block: 4px; font-size: 12px; }
   main { padding-top: 24px; }
   .timeline-grid { grid-template-columns: 1fr; gap: 35px; margin-top: 34px; }
-  .record-line { grid-template-columns: 112px minmax(0, 1fr); gap: 6px; font-size: 12px; }
+  .contact-directory { grid-template-columns: 1fr; gap: 28px; }
+  .contact-list { gap: 10px; }
+  .contact-value { font-size: 11px; }
+  .record-grid { grid-template-columns: 1fr; row-gap: 8px; }
+  .record-line { grid-template-columns: 126px minmax(0, 1fr); gap: 6px; font-size: 12px; }
   .skills-grid { grid-template-columns: 1fr; gap: 24px; }
   .contact-record .record-line { grid-template-columns: 1fr; gap: 2px; }
-  .site-footer { flex-wrap: wrap; gap: 12px 20px; }
-  .site-footer > span { margin-left: auto; }
+  .site-footer { grid-template-columns: 30px minmax(0, 1fr) 30px; gap: 12px; }
+  .footer-content { flex-wrap: wrap; gap: 8px; }
+  .footer-content p { width: 100%; font-size: 10px; }
   .publication { padding-left: 0; }
   .publication-list { padding-left: 25px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .terminal.is-revealing [data-line]:not(.is-visible) { visibility: visible; }
+}
+@media (max-width: 360px) {
+  .header-inner { align-items: start; }
+  .header-inner .chip-logo { margin-top: 37px; }
+  .site-nav { grid-template-columns: 1fr 1fr; gap: 10px 16px; }
+  .portrait-link { grid-column: 1 / -1; grid-row: 1; justify-self: center; }
+  .nav-left { grid-column: 1; grid-row: 2; }
+  .nav-right { grid-column: 2; grid-row: 2; }
 }
 @media print {
   :root { --background: #fff; --foreground: #000; --rule: #888; }
