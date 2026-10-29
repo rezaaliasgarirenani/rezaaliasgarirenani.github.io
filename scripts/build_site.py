@@ -3,7 +3,10 @@
 import shutil
 from pathlib import Path
 
-SITE_FILES = ("index.html", "robots.txt", "sitemap.xml", ".nojekyll")
+SITE_FILES = (
+    "index.html", "research.html", "publications.html", "about.html",
+    "robots.txt", "sitemap.xml", ".nojekyll",
+)
 SITE_DIRECTORIES = ("assets", "src")
 
 
@@ -52,4 +55,4 @@ def build_site(repository_root):
 if __name__ == "__main__":
     output = build_site(Path(__file__).resolve().parents[1])
     print(f"Website staged in {output}")
-    print("Only index.html, assets/, src/, robots.txt, sitemap.xml, and .nojekyll are published.")
+    print("Only the four public pages, assets/, src/, and crawler files are published.")

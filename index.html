@@ -4,146 +4,92 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <meta name="theme-color" content="#0d1117">
+  <meta name="theme-color" content="#000000">
   <title>Reza Aliasgari Renani</title>
-  <meta name="description" content="Reza Aliasgari Renani's research in FPGA and RTL design, semiconductor radiation effects, and electron-beam plasma systems. Publications, background, and CV.">
+  <meta name="description" content="Reza Aliasgari Renani. Electronics and applied physics, research experience, and education at MIPT.">
   <link rel="canonical" href="https://rezaaliasgarirenani.github.io/">
-  <link rel="icon" type="image/png" href="assets/chip_radiation_logo.png">
+  <link rel="icon" type="image/png" href="assets/reza_aliasgari_renani.png">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Reza Aliasgari Renani">
-  <meta property="og:description" content="RTL &amp; Verification | Semiconductor Physics | Plasma Systems. FPGA-based ISP, electrical characterization of semiconductor devices, plasma systems and radiation conditions.">
+  <meta property="og:description" content="Reza Aliasgari Renani. Electronics and applied physics, research experience, and education at MIPT.">
   <meta property="og:url" content="https://rezaaliasgarirenani.github.io/">
-  <link rel="stylesheet" href="src/site.css?v=hero_motto">
+  <link rel="stylesheet" href="src/site.css?v=terminal-1">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header"><div class="container header-inner">
-    <a class="brand" href="#main" aria-label="Main"><img src="assets/chip_radiation_logo.png" width="48" height="48" alt=""></a>
-    <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="main-nav" aria-expanded="false" hidden>Menu <span aria-hidden="true">+</span></button>
-    <nav class="site-nav" id="main-nav" aria-label="Main navigation">
-      <div class="nav-group nav-group-left"><a href="#research">Research</a><a href="#publications">Publications</a></div>
-      <a class="home-link" href="#main" aria-label="RAR — Main" title="Main">RAR</a>
-      <div class="nav-group nav-group-right"><a href="#about">About</a><a class="cv-link" href="assets/reza_aliasgari_renani_cv.pdf?v=20261013" target="_blank" rel="noopener noreferrer" aria-label="CV (PDF, opens in a new tab)">CV <span aria-hidden="true" class="arrow">↗</span></a></div>
+  <header class="site-header container">
+    <nav class="site-nav" aria-label="Main navigation">
+      <div class="nav-group nav-left"><a href="research.html">Research</a><a href="publications.html">Publications</a></div>
+      <a class="portrait-link" href="index.html" aria-label="Home — Reza Aliasgari Renani" title="Home" aria-current="page"><img src="assets/reza_aliasgari_renani.png" width="72" height="72" alt="Reza Aliasgari Renani"></a>
+      <div class="nav-group nav-right"><a href="about.html">About</a><a href="assets/reza_aliasgari_renani_cv.pdf?v=20261013" target="_blank" rel="noopener noreferrer" aria-label="CV (PDF, opens in a new tab)">CV <span aria-hidden="true">↗</span></a></div>
     </nav>
-    <a class="brand header-logo-right" href="#main" aria-label="Main"><img src="assets/chip_radiation_logo.png" width="48" height="48" alt=""></a>
-  </div></header>
-  <main id="main">
-    <section class="hero" aria-labelledby="hero-name">
-      <canvas id="binary-field" aria-hidden="true"></canvas>
-      <h1 class="container hero-name" id="hero-name">Reza Aliasgari Renani</h1>
-      <p class="container hero-motto">Veritas Vos Liberabit</p>
-      <div class="container hero-grid"><div class="hero-copy">
-        <h2 class="hero-title" id="hero-title">Electronics<br>&amp; Applied <span>Physics</span></h2>
-        <p class="hero-summary">I work on FPGA-based ISP, electrical characterization of semiconductor devices, plasma systems and radiation conditions.</p>
-        <div class="hero-actions"><a class="button" href="#research">Explore my research <span aria-hidden="true">↓</span></a><a class="button secondary" href="assets/reza_aliasgari_renani_cv.pdf?v=20261013" target="_blank" rel="noopener noreferrer" aria-label="View CV (PDF, opens in a new tab)">View CV <span aria-hidden="true">↗</span></a></div>
-      </div><figure class="hero-figure">
-        <img src="assets/graphics/fpga_schematic.svg?v=subtle_orbitals" width="520" height="470" alt="A microchip with two subtle orbital rings behind it.">
-      </figure></div>
-      <div class="container hero-foot"><button class="motion-toggle" type="button" aria-label="Pause animation" hidden><span class="motion-symbol" aria-hidden="true">Ⅱ</span><span class="motion-label">Pause binary motion</span></button></div>
-    </section>
-    <div class="topic-strip"><nav class="container topic-links" aria-label="Explore research topics">
-      <a href="#digital-design"><span class="topic-number">01</span> RTL &amp; Verification <span class="arrow" aria-hidden="true">↗</span></a>
-      <a href="#semiconductor-physics"><span class="topic-number">02</span> Semiconductor Physics <span class="arrow" aria-hidden="true">↗</span></a>
-      <a href="#plasma-systems"><span class="topic-number">03</span> Plasma Systems <span class="arrow" aria-hidden="true">↗</span></a>
-    </nav></div>
-
-    <section class="section" id="research" aria-labelledby="research-title"><div class="container">
-      <div class="section-head"><h2 id="research-title">Research</h2></div>
-      <div class="research-grid">
-        <article class="research-card" id="digital-design" style="--accent:var(--blue)">
-          <div class="card-top"><h3>RTL &amp; Verification</h3><img class="research-icon" src="assets/graphics/digital_design.svg" width="25" height="25" alt=""></div>
-          <ul class="research-points">
-            <li>Developed Verilog RTL, a fixed-point arithmetic library, and LUT-based function approximations using Horner’s method.</li>
-            <li>Implemented rgb2hsv, Sobel operators, tone mapping, demosaicing, lens distortion correction, and resizing in manual and Simulink-generated HDL.</li>
-            <li>Built AXI and AXI4-Stream SystemVerilog testbenches; compared reconstructed frames with Python, MATLAB, and Simulink reference models; automated simulation and output analysis with Python and cocotb.</li>
-            <li>Synthesized and implemented designs in Vivado; verified ISP pipelines on Xilinx Zybo Z7-20 and Nexys Video boards.</li>
-          </ul>
-        </article>
-        <article class="research-card" id="semiconductor-physics" style="--accent:var(--purple)">
-          <div class="card-top"><h3>Semiconductor Physics</h3><img class="research-icon" src="assets/graphics/device_physics.svg" width="25" height="25" alt=""></div>
-          <ul class="research-points">
-            <li>Characterized aluminum-gated SiO<sub>2</sub> MOS capacitors after 1–20 keV electron and 1 MeV gamma irradiation using capacitance–voltage (C–V) and thermally stimulated current (TSC) measurements over 80–400 K.</li>
-            <li>Combined C–V shifts and TSC spectra to locate electrically active traps, classify electron- or hole-trapping behavior, estimate activation energies, and calculate interface-state density.</li>
-            <li>Developed MATLAB applications to automate TSC, C–V, current–voltage, current–time, and deep-level transient spectroscopy measurements.</li>
-          </ul>
-        </article>
-        <article class="research-card" id="plasma-systems" style="--accent:var(--cyan)">
-          <div class="card-top"><h3>Plasma Systems</h3><img class="research-icon" src="assets/graphics/plasma_space.svg" width="25" height="25" alt=""></div>
-          <ul class="research-points">
-            <li>Conducted FPGA-board irradiation experiments using 25–60 keV electron beams at currents up to 100 mA.</li>
-            <li>Used low-pressure oxygen atmospheres (10<sup>−6</sup>–50 Torr), generating plasma and X-rays.</li>
-            <li>Applied combined thermal cycling (218–393 K) and surface charging to evaluate FPGA reliability under plasma conditions.</li>
-          </ul>
-        </article>
+  </header>
+  <main class="container" id="main" tabindex="-1">
+    <div class="terminal" data-terminal>
+      <div class="terminal-toolbar"><p class="path">~/reza / profile</p><button class="reveal-skip" type="button" data-reveal-skip hidden>[show all]</button></div>
+      <div class="page-intro">
+        <h1 data-line>Reza Aliasgari Renani</h1>
+        <p class="motto" data-line>Veritas Vos Liberabit</p>
       </div>
-    </div></section>
-
-    <section class="section publications-section" id="publications" aria-labelledby="publications-title"><div class="container">
-      <div class="section-head"><div><span class="eyebrow">02 / Papers &amp; presentations</span><h2 id="publications-title">Publications</h2></div><a class="text-link" href="https://scholar.google.com/citations?user=L9Vv3C8AAAAJ&amp;hl=en">Google Scholar <span class="arrow" aria-hidden="true">↗</span></a></div>
-      <div class="publication-group" aria-labelledby="journal-articles">
-        <h3 class="publication-group-title" id="journal-articles">Journal Articles</h3>
-        <ol class="publication-list" role="list">
-          <li class="publication"><span class="pub-year"><span class="pub-number" aria-hidden="true">[1]</span> 2023</span><div class="pub-body"><h4><a href="https://doi.org/10.1134/S1063739723600516">Investigation of low energy electron irradiated SiO<sub>2</sub> based MOS devices by capacitance-voltage and thermally stimulated current techniques</a></h4><p class="pub-authors"><strong>R. Aliasgari Renani</strong>, O. A. Soltanovich, M. A. Knyazev, and S. V. Koveshnikov</p><p class="pub-venue">Russian Microelectronics · Vol. 52, Suppl. 1 · S274–S278</p></div><a class="pub-link" href="https://doi.org/10.1134/S1063739723600516" aria-label="DOI for irradiated MOS devices journal article">DOI <span class="arrow" aria-hidden="true">↗</span></a></li>
-        </ol>
+      <section class="identity" aria-labelledby="identity-heading">
+        <h2 class="section-heading" id="identity-heading" data-line><span class="prompt" aria-hidden="true">&gt;</span> Personal details</h2>
+        <dl class="record-grid">
+          <div class="record-line" data-line><dt><span class="prompt" aria-hidden="true">&gt;</span> First name:</dt><dd>Reza</dd></div>
+          <div class="record-line" data-line><dt><span class="prompt" aria-hidden="true">&gt;</span> Last name:</dt><dd>Aliasgari Renani</dd></div>
+          <div class="record-line" data-line><dt><span class="prompt" aria-hidden="true">&gt;</span> Field:</dt><dd>Electronics &amp; applied physics</dd></div>
+          <div class="record-line" data-line><dt><span class="prompt" aria-hidden="true">&gt;</span> Based in:</dt><dd>Moscow, Russia</dd></div>
+          <div class="record-line" data-line><dt><span class="prompt" aria-hidden="true">&gt;</span> Email:</dt><dd><a href="mailto:aliasgari.rrkh@phystech.edu">aliasgari.rrkh@phystech.edu</a></dd></div>
+          <div class="record-line" data-line><dt><span class="prompt" aria-hidden="true">&gt;</span> CV:</dt><dd><a href="assets/reza_aliasgari_renani_cv.pdf?v=20261013" target="_blank" rel="noopener noreferrer">English · 2 pages · PDF <span aria-hidden="true">↗</span></a></dd></div>
+        </dl>
+      </section>
+      <div class="timeline-grid">
+        <section aria-labelledby="roles-heading">
+          <h2 class="section-heading" id="roles-heading" data-line><span class="prompt" aria-hidden="true">&gt;</span> Roles</h2>
+          <ol class="timeline">
+            <li class="timeline-entry current">
+              <p class="timeline-date" data-line><time datetime="2024-09">Sep 2024</time> — Present</p>
+              <h3 data-line>Programmer / RTL Design Engineer</h3>
+              <p data-line><a href="http://ai.mipt.ru/design-center">Laboratory of Software and System-on-Chip Development</a></p>
+              <p data-line>Design Center for the Development of Microprocessor Technology for AI Systems, MIPT</p>
+              <p class="timeline-location" data-line>Moscow, Russia</p>
+            </li>
+            <li class="timeline-entry">
+              <p class="timeline-date" data-line><time datetime="2023-03">Mar 2023</time> — <time datetime="2024-08">Aug 2024</time></p>
+              <h3 data-line>Laboratory Researcher</h3>
+              <p data-line><a href="https://www.iptm.ru/new/index.ru.html">Laboratory of Local Diagnostics of Semiconductor Materials</a></p>
+              <p data-line>Institute of Microelectronics Technology, Russian Academy of Sciences (IMT RAS)</p>
+              <p class="timeline-location" data-line>Moscow, Russia</p>
+            </li>
+          </ol>
+        </section>
+        <section aria-labelledby="education-heading">
+          <h2 class="section-heading" id="education-heading" data-line><span class="prompt" aria-hidden="true">&gt;</span> Education</h2>
+          <ol class="timeline">
+            <li class="timeline-entry">
+              <p class="timeline-date" data-line><time datetime="2024-09">Sep 2024</time> — <time datetime="2026-06">Jun 2026</time></p>
+              <h3 data-line>M.S. Applied Mathematics and Physics</h3>
+              <p data-line>Plasma Systems · GPA: 4.82/5.0</p>
+              <p data-line><a href="https://mipt.ru/">Moscow Institute of Physics and Technology (MIPT, Phystech)</a></p>
+              <p class="thesis" data-line>Thesis: Investigation of radiation-induced effects on programmable microelectronic systems by means of plasma-based facilities simulating space flight conditions.</p>
+            </li>
+            <li class="timeline-entry">
+              <p class="timeline-date" data-line><time datetime="2020-09">Sep 2020</time> — <time datetime="2024-06">Jun 2024</time></p>
+              <h3 data-line>B.S. Technical Physics</h3>
+              <p data-line>Aerospace Engineering · GPA: 4.56/5.0</p>
+              <p data-line><a href="https://mipt.ru/">Moscow Institute of Physics and Technology (MIPT, Phystech)</a></p>
+              <p class="thesis" data-line>Thesis: Investigation of the effect of low energy (1–20 keV) electron and high energy (1 MeV) gamma quanta irradiation on the electro-physical properties of dielectric-semiconductor structures.</p>
+            </li>
+          </ol>
+        </section>
       </div>
-      <div class="publication-group" aria-labelledby="conference-papers">
-        <h3 class="publication-group-title" id="conference-papers">Conference Papers</h3>
-        <ol class="publication-list" role="list">
-          <li class="publication"><span class="pub-year"><span class="pub-number" aria-hidden="true">[1]</span> 2026</span><div class="pub-body"><h4><a href="https://doi.org/10.1109/DSPA69176.2026.11476776">Investigation of FPGA resource utilization in manual and Simulink-generated Verilog implementations of image signal processing algorithms</a></h4><p class="pub-authors"><strong>R. Aliasgari Renani</strong> et al.</p><p class="pub-venue">28th International Conference on Digital Signal Processing and its Applications · DSPA</p></div><a class="pub-link" href="https://doi.org/10.1109/DSPA69176.2026.11476776" aria-label="DOI for FPGA resource utilization paper">DOI <span class="arrow" aria-hidden="true">↗</span></a></li>
-        </ol>
-      </div>
-      <div class="publication-group" aria-labelledby="posters-presentations">
-        <h3 class="publication-group-title" id="posters-presentations">Posters &amp; Presentations</h3>
-        <ol class="publication-list" role="list">
-          <li class="publication"><span class="pub-year"><span class="pub-number" aria-hidden="true">[1]</span> 2026</span><div class="pub-body"><span class="pub-kind presentation">Presentation</span><h4><a href="https://conf.mipt.ru/conference/23999">Simulating space environments with electron-beam plasma for FPGA radiation testing</a></h4><p class="pub-authors"><strong>R. Aliasgari Renani</strong> and M. N. Vasiliev</p><p class="pub-venue">68th All-Russian Scientific Conference of MIPT</p></div><a class="pub-link" href="https://conf.mipt.ru/conference/23999" aria-label="Conference for electron-beam plasma presentation">Event <span class="arrow" aria-hidden="true">↗</span></a></li>
-          <li class="publication"><span class="pub-year"><span class="pub-number" aria-hidden="true">[2]</span> 2025</span><div class="pub-body"><span class="pub-kind presentation">Presentation</span><h4><a href="https://meetups.yadro.com/fpga-msk-1125/">Comparative analysis of manual and Simulink-generated Verilog code for image processing algorithms</a></h4><p class="pub-authors">V. Vologin, <strong>R. Aliasgari Renani</strong>, V. Vasilevskiy, and V. Chesnokov</p><p class="pub-venue">YADRO FPGA-Systems Conference</p></div><a class="pub-link" href="https://meetups.yadro.com/fpga-msk-1125/" aria-label="Event for YADRO FPGA presentation">Event <span class="arrow" aria-hidden="true">↗</span></a></li>
-          <li class="publication"><span class="pub-year"><span class="pub-number" aria-hidden="true">[3]</span> 2023</span><div class="pub-body"><span class="pub-kind presentation">Presentation</span><h4><a href="https://doi.org/10.29003/m3563.ICMNE-2023">Study of the traps in SiO<sub>2</sub> and Si<sub>3</sub>N<sub>4</sub> generated by low-energy electron irradiation and hydrogen plasma treatment using capacitance-voltage and thermally stimulated current techniques</a></h4><p class="pub-authors">O. A. Soltanovich, <strong>R. Aliasgari Renani</strong>, S. V. Koveshnikov, M. A. Knyazev, A. V. Kovalchuk, and S. Yu. Shapoval</p><p class="pub-venue">15th International Conference on Micro- and Nanoelectronics · ICMNE · p. 122</p></div><a class="pub-link" href="https://doi.org/10.29003/m3563.ICMNE-2023" aria-label="DOI for ICMNE conference proceedings">DOI <span class="arrow" aria-hidden="true">↗</span></a></li>
-          <li class="publication"><span class="pub-year"><span class="pub-number" aria-hidden="true">[4]</span> 2023</span><div class="pub-body"><span class="pub-kind presentation">Poster</span><h4><a href="https://cebt23.iptm.ru/download/numbered/91.pdf">Investigation of electrically active defects introduced into silicon oxide by irradiation of low-energy electrons</a></h4><p class="pub-authors"><strong>R. Aliasgari Renani</strong>, O. A. Soltanovich, M. A. Knyazev, and S. V. Koveshnikov</p><p class="pub-venue">2nd Joint Conference on Electron Beam Technologies and X-ray Optics in Microelectronics · CEBT</p></div><a class="pub-link" href="https://cebt23.iptm.ru/download/numbered/91.pdf" aria-label="PDF poster on electrically active defects">Poster <span class="arrow" aria-hidden="true">↗</span></a></li>
-        </ol>
-      </div>
-      <div class="pub-footer"><a class="text-link" href="https://orcid.org/0009-0000-8983-755X">ORCID <span class="arrow" aria-hidden="true">↗</span></a><a class="text-link" href="https://ieeexplore.ieee.org/author/808687147056276">IEEE Xplore <span class="arrow" aria-hidden="true">↗</span></a><a class="text-link" href="https://www.scopus.com/authid/detail.uri?authorId=58953218100">Scopus <span class="arrow" aria-hidden="true">↗</span></a></div>
-    </div></section>
-
-    <section class="section about-section" id="about" aria-labelledby="about-title"><div class="container about-grid">
-      <div class="about-copy"><div class="about-intro"><img class="about-portrait" src="assets/reza_aliasgari_renani.png" width="128" height="128" alt="Reza Aliasgari Renani" loading="lazy" decoding="async"><h2 id="about-title">Researcher</h2></div>
-        <p>I'm a researcher in electronics and applied physics. My background at the <strong>Moscow Institute of Physics and Technology (MIPT)</strong> spans aerospace engineering, semiconductor devices, and plasma systems.</p><p>I work across the full experiment: designing digital logic, building verification tools, automating instruments, and interpreting measurements. I enjoy the point where a mathematical model meets a physical device.</p>
-        <a class="text-link" href="assets/reza_aliasgari_renani_cv.pdf?v=20261013" target="_blank" rel="noopener noreferrer" aria-label="View my full CV (PDF, opens in a new tab)">View my full CV <span class="arrow" aria-hidden="true">↗</span></a>
-        <div class="skills"><h3>Skills</h3><div class="skills-grid">
-          <div><h4>Advanced</h4><ul>
-            <li>Automation of Experimental Techniques</li>
-            <li>Electrical Characterization</li>
-            <li>MATLAB, Simulink, HDL Coder</li>
-            <li>Verilog, RTL, FPGA Development</li>
-            <li>SciPy, cocotb, OpenCV</li>
-            <li>Git, Linux OS, LaTeX, Microsoft Office</li>
-            <li>English (C1), Persian (Native)</li>
-          </ul></div>
-          <div><h4>Intermediate</h4><ul>
-            <li>Python, C++, Arduino</li>
-            <li>Vivado, Vitis, Vitis HLS</li>
-            <li>OriginLab, Data Processing</li>
-            <li>SolidWorks, 3D Design</li>
-            <li>PCB, EasyEDA</li>
-            <li>OpenRocket, ERDAS IMAGINE</li>
-            <li>German (B1), Russian (B1)</li>
-          </ul></div>
-        </div></div>
-        <div class="about-contact"><h3 class="timeline-heading">Contact</h3><div class="contact-links"><a href="mailto:aliasgari.rrkh@phystech.edu"><span><span class="contact-link-label">Academic email</span>aliasgari.rrkh@phystech.edu</span><span class="arrow" aria-hidden="true">↗</span></a><a href="mailto:rezaaliasgarirenani@gmail.com"><span><span class="contact-link-label">Personal email</span>rezaaliasgarirenani@gmail.com</span><span class="arrow" aria-hidden="true">↗</span></a><a href="https://linkedin.com/in/reza-aliasgari-renani"><span><span class="contact-link-label">Connect</span>LinkedIn</span><span class="arrow" aria-hidden="true">↗</span></a></div></div>
-      </div><div><h3 class="timeline-heading">Research experience</h3><div class="timeline">
-        <article class="timeline-item"><span class="timeline-date">2024 — Present</span><h3>Programmer / RTL Design Engineer</h3><p><a href="http://ai.mipt.ru/design-center">Laboratory of Software and System-on-Chip Development, MIPT</a></p><p>FPGA image processing, verification, and electron-beam plasma exposure experiments.</p></article>
-        <article class="timeline-item"><span class="timeline-date">2023 — 2024</span><h3>Laboratory Researcher</h3><p><a href="https://www.iptm.ru/new/index.ru.html">Institute of Microelectronics Technology, RAS</a></p><p>Semiconductor characterization, instrument automation, and radiation-induced defect analysis.</p></article>
-      </div><div class="education"><h3 class="timeline-heading">Education / MIPT</h3><div class="timeline">
-        <article class="timeline-item"><span class="timeline-date">2024 — 2026</span><h3>M.S. Applied Mathematics &amp; Physics</h3><p>Plasma Systems · GPA 4.82 / 5.0</p><p>Radiation-induced effects on programmable microelectronic systems in simulated space-flight conditions.</p></article>
-        <article class="timeline-item"><span class="timeline-date">2020 — 2024</span><h3>B.S. Technical Physics</h3><p>Aerospace Engineering · GPA 4.56 / 5.0</p><p>Electron and gamma irradiation effects on dielectric–semiconductor structures.</p></article>
-      </div></div></div>
-    </div></section>
-
-</main>
-  <footer class="site-footer"><div class="container">
-    <div class="footer-top"><div class="footer-identity"><a class="brand" href="#main" aria-label="Back to main"><img src="assets/chip_radiation_logo.png" width="48" height="48" alt=""></a><span>Reza Aliasgari Renani<br>RTL Design · Semiconductor Physics · Plasma Systems</span></div><nav class="social-links" aria-label="Academic and professional profiles"><a href="https://github.com/rezaaliasgarirenani">GitHub</a><a href="https://scholar.google.com/citations?user=L9Vv3C8AAAAJ&amp;hl=en">Scholar</a><a href="https://orcid.org/0009-0000-8983-755X">ORCID</a><a href="https://www.researchgate.net/profile/Reza-Aliasgari-Renani">ResearchGate</a></nav></div>
-    <div class="footer-bottom"><span>© 2026 Reza Aliasgari Renani</span><span><a href="https://github.com/rezaaliasgarirenani/rezaaliasgarirenani.github.io">Website source ↗</a><span class="separator">/</span><a href="#main">Back to main ↑</a></span></div>
-  </div></footer>
-  <script src="src/navigation.js" defer></script>
-  <script src="src/binary_background.js?v=mirrored_field" defer></script>
+      <p class="terminal-end" data-line><span aria-hidden="true">&gt;</span> <a href="research.html">Research</a> / <a href="publications.html">Publications</a> / <a href="about.html">About &amp; contact</a><span class="cursor" aria-hidden="true">_</span></p>
+    </div>
+  </main>
+  <footer class="site-footer container">
+    <a href="index.html">~/reza</a>
+    <div><a href="https://github.com/rezaaliasgarirenani">GitHub</a><a href="https://scholar.google.com/citations?user=L9Vv3C8AAAAJ&amp;hl=en">Scholar</a><a href="mailto:aliasgari.rrkh@phystech.edu">Email</a></div>
+    <span>© 2026</span>
+  </footer>
+  <script src="src/terminal.js?v=terminal-1" defer></script>
 </body>
 </html>

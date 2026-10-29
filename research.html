@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#000000">
+  <title>Research — Reza Aliasgari Renani</title>
+  <meta name="description" content="Research in FPGA and RTL design, semiconductor radiation effects, instrument automation, and electron-beam plasma systems.">
+  <link rel="canonical" href="https://rezaaliasgarirenani.github.io/research.html">
+  <link rel="icon" type="image/png" href="assets/reza_aliasgari_renani.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Research — Reza Aliasgari Renani">
+  <meta property="og:description" content="Research in FPGA and RTL design, semiconductor radiation effects, instrument automation, and electron-beam plasma systems.">
+  <meta property="og:url" content="https://rezaaliasgarirenani.github.io/research.html">
+  <link rel="stylesheet" href="src/site.css?v=terminal-1">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header container">
+    <nav class="site-nav" aria-label="Main navigation">
+      <div class="nav-group nav-left"><a href="research.html" aria-current="page">Research</a><a href="publications.html">Publications</a></div>
+      <a class="portrait-link" href="index.html" aria-label="Home — Reza Aliasgari Renani" title="Home"><img src="assets/reza_aliasgari_renani.png" width="72" height="72" alt="Reza Aliasgari Renani"></a>
+      <div class="nav-group nav-right"><a href="about.html">About</a><a href="assets/reza_aliasgari_renani_cv.pdf?v=20261013" target="_blank" rel="noopener noreferrer" aria-label="CV (PDF, opens in a new tab)">CV <span aria-hidden="true">↗</span></a></div>
+    </nav>
+  </header>
+  <main class="container" id="main" tabindex="-1">
+    <div class="page-intro"><p class="path">~/reza / research</p><h1>Research</h1><p class="page-summary">RTL &amp; verification, semiconductor physics, and plasma systems.</p></div>
+    <section class="document-section" id="digital-design">
+      <h2 class="section-heading"><span class="prompt" aria-hidden="true">&gt;</span> RTL &amp; Verification</h2>
+      <ul class="research-points">
+          <li>Developed Verilog RTL, a fixed-point arithmetic library, and LUT-based function approximations using Horner’s method.</li>
+          <li>Implemented rgb2hsv, Sobel operators, tone mapping, demosaicing, lens distortion correction, and resizing in manual and Simulink-generated HDL.</li>
+          <li>Built AXI and AXI4-Stream SystemVerilog testbenches; compared reconstructed frames with Python, MATLAB, and Simulink reference models; automated simulation and output analysis with Python and cocotb.</li>
+          <li>Synthesized and implemented designs in Vivado; verified ISP pipelines on Xilinx Zybo Z7-20 and Nexys Video boards.</li>
+      </ul>
+    </section>
+    <section class="document-section" id="semiconductor-physics">
+      <h2 class="section-heading"><span class="prompt" aria-hidden="true">&gt;</span> Semiconductor Physics</h2>
+      <ul class="research-points">
+          <li>Characterized aluminum-gated SiO<sub>2</sub> MOS capacitors after 1–20 keV electron and 1 MeV gamma irradiation using capacitance–voltage (C–V) and thermally stimulated current (TSC) measurements over 80–400 K.</li>
+          <li>Combined C–V shifts and TSC spectra to locate electrically active traps, classify electron- or hole-trapping behavior, estimate activation energies, and calculate interface-state density.</li>
+          <li>Developed MATLAB applications to automate TSC, C–V, current–voltage, current–time, and deep-level transient spectroscopy measurements.</li>
+      </ul>
+    </section>
+    <section class="document-section" id="plasma-systems">
+      <h2 class="section-heading"><span class="prompt" aria-hidden="true">&gt;</span> Plasma Systems</h2>
+      <ul class="research-points">
+          <li>Conducted FPGA-board irradiation experiments using 25–60 keV electron beams at currents up to 100 mA.</li>
+          <li>Used low-pressure oxygen atmospheres (10<sup>−6</sup>–50 Torr), generating plasma and X-rays.</li>
+          <li>Applied combined thermal cycling (218–393 K) and surface charging to evaluate FPGA reliability under plasma conditions.</li>
+      </ul>
+    </section>
+    <p class="document-note">Full employment history and dates: <a href="index.html#roles-heading">roles timeline</a>.</p>
+  </main>
+  <footer class="site-footer container">
+    <a href="index.html">~/reza</a>
+    <div><a href="https://github.com/rezaaliasgarirenani">GitHub</a><a href="https://scholar.google.com/citations?user=L9Vv3C8AAAAJ&amp;hl=en">Scholar</a><a href="mailto:aliasgari.rrkh@phystech.edu">Email</a></div>
+    <span>© 2026</span>
+  </footer>
+</body>
+</html>
