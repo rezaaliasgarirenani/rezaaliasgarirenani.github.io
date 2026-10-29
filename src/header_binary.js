@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const SPEED_PX_PER_SECOND = 120;
+  const SPEED_PX_PER_SECOND = 60;
   const DIGIT_UPDATE_MS = 70;
   const CELL_WIDTH_PX = 8;
 

@@ -11,7 +11,7 @@ A small, static, multipage site built with HTML, CSS, and JavaScript. The base s
 - `publications.html` — journal articles, conference papers, posters, and presentations.
 - `about.html` — background, skills, languages, contacts, and academic profiles.
 - `src/site.css` — shared layout, typography, and responsive/print styles.
-- `src/header_binary.js` — continuously fills the 18 px header strip with a seamless binary belt. `SPEED_PX_PER_SECOND = 120` controls horizontal motion; `DIGIT_UPDATE_MS = 70` controls digit changes. Two synchronized copies prevent empty gaps. Pausing stops both movement and digit changes; offscreen/hidden tabs, reduced motion, and JavaScript-free reading remain supported.
+- `src/header_binary.js` — continuously fills the 18 px header strip with a seamless binary belt. `SPEED_PX_PER_SECOND = 60` controls horizontal motion; `DIGIT_UPDATE_MS = 70` controls digit changes. Two synchronized copies prevent empty gaps. Pausing stops both movement and digit changes; offscreen/hidden tabs, reduced motion, and JavaScript-free reading remain supported.
 - `src/header_clocks.js` — live 24-hour city clocks with seconds, updated on whole-second boundaries using `Intl.DateTimeFormat` and the IANA zones `America/New_York` and `Asia/Singapore`. New York daylight-saving changes are automatic; no fixed UTC offsets or external time service are used.
 - `src/terminal.js` — line-by-line reveal on Home, with `LINE_DELAY_MS = 50` (50 milliseconds between lines). The 30 current output units take approximately 1.45 seconds in total. Footer links remain visible independently of the reveal. Visitors can skip the reveal; reduced-motion preferences show everything immediately. All content and navigation also work without JavaScript.
 - `assets/reza_aliasgari_renani.png` — portrait used in the circular Home link.
@@ -62,4 +62,4 @@ Screen typography uses 16 px body text, at least 14 px for dates and supporting 
 
 Home’s three panel titles and numbers identify content rather than simulated live status. The terminal panels stack on smaller screens. Shared footer directories are static HTML in all four pages; keep their link destinations and order synchronized when editing.
 
-Header navigation is ordered CV, Research, portrait/Home, Publications, About. The New York clock sits on the left with its city label below the time; Singapore mirrors it on the right with the time below the label. Narrow screens move the clocks into a separate row to retain readable spacing.
+Header navigation is ordered CV, Research, portrait/Home, Publications, About. New York sits on the left and Singapore on the right, both with the city name below the time. Narrow screens move the clocks into a separate row to retain readable spacing.
