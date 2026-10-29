@@ -2,7 +2,7 @@
   'use strict';
 
   // Change this value to adjust the pause between consecutive output lines.
-  const LINE_DELAY_MS = 120;
+  const LINE_DELAY_MS = 50;
 
   const terminal = document.querySelector('[data-terminal]');
   if (!terminal) return;

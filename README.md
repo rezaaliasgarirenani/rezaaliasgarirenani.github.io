@@ -11,7 +11,7 @@ A small, static, multipage site built with HTML, CSS, and JavaScript. The screen
 - `publications.html` — journal articles, conference papers, posters, and presentations.
 - `about.html` — background, skills, languages, contacts, and academic profiles.
 - `src/site.css` — shared layout, typography, and responsive/print styles.
-- `src/terminal.js` — line-by-line reveal on Home, with `LINE_DELAY_MS = 120` (120 milliseconds between lines). The 46 current output units take approximately 5.4 seconds in total. Visitors can skip the reveal; reduced-motion preferences show everything immediately. All content and navigation also work without JavaScript.
+- `src/terminal.js` — line-by-line reveal on Home, with `LINE_DELAY_MS = 50` (50 milliseconds between lines). The 46 current output units take approximately 2.25 seconds in total. Visitors can skip the reveal; reduced-motion preferences show everything immediately. All content and navigation also work without JavaScript.
 - `assets/reza_aliasgari_renani.png` — portrait used in the circular Home link.
 - `assets/chip_radiation_logo.png` — chip logos on both sides of the header and footer, and the browser favicon.
 - `assets/icons/` — contact and profile icons. Scientific, GitHub, and LinkedIn SVGs are copied from `../rezaaliasgarirenani/assets_readme/`; Instagram, Facebook, X, and Gmail icons are from the CC0 Simple Icons project. Email and phone are simple local SVGs.
@@ -54,4 +54,6 @@ The English two-page CV in `../reza/documents/CVR/english/2_page/` is the defaul
 
 Replace `assets/reza_aliasgari_renani_cv.pdf` when that CV changes and update the `?v=` value on CV links in all four pages to refresh browser caches. Update the stylesheet version in all four pages after changing shared CSS.
 
-The Instagram, Facebook, X, and LinkedIn destinations were verified against GitHub’s public social-account API for `rezaaliasgarirenani`. The directory also includes GitHub, all six scientific profiles from the profile README, and phone/email/Gmail contact links.
+The Instagram, Facebook, X, and LinkedIn destinations were verified against GitHub’s public social-account API for `rezaaliasgarirenani`. The directory uses three category rows with icons and names; addresses and account identifiers remain in the link destinations. It also includes GitHub, all six scientific profiles from the profile README, and phone/email/Gmail contact links.
+
+Screen typography uses 16 px body text, at least 14 px for dates and supporting text, and larger headings. Home’s path and centered name share a line on wider screens; small screens wrap the heading to preserve legibility. Contact/profile rows wrap their links instead of shrinking the text.
