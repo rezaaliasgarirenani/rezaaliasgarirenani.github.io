@@ -121,8 +121,10 @@ h1 { font-size: clamp(28px, 3.4vw, 38px); line-height: 1.45; letter-spacing: -.0
 .contact-record .record-line { grid-template-columns: 180px minmax(0, 1fr); }
 .site-footer { border-top: 1px solid var(--rule); padding-top: 30px; font-size: 14px; }
 .footer-bottom { display: grid; grid-template-columns: 48px minmax(0, 1fr) 48px; align-items: center; gap: 24px; padding-block: 30px; }
-.footer-content { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; }
-.footer-content p { text-align: right; }
+.footer-content { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: baseline; gap: 24px; }
+.footer-content > a { grid-column: 1; grid-row: 1; justify-self: start; }
+.footer-name { grid-column: 2; grid-row: 1; text-align: center; }
+.footer-right { grid-column: 3; grid-row: 1; justify-self: end; text-align: right; }
 .site-footer a { text-decoration: none; }
 .site-footer a:hover { text-decoration: underline; }
 
@@ -156,8 +158,10 @@ h1 { font-size: clamp(28px, 3.4vw, 38px); line-height: 1.45; letter-spacing: -.0
   .skills-grid { grid-template-columns: 1fr; gap: 32px; }
   .contact-record .record-line { grid-template-columns: 1fr; gap: 5px; }
   .footer-bottom { grid-template-columns: 30px minmax(0, 1fr) 30px; gap: 12px; }
-  .footer-content { flex-wrap: wrap; gap: 12px; }
-  .footer-content p { width: 100%; }
+  .footer-content { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; }
+  .footer-content > a { grid-column: 1; grid-row: 2; }
+  .footer-name { grid-column: 1 / -1; grid-row: 1; }
+  .footer-right { grid-column: 2; grid-row: 2; }
   .publication { padding-left: 0; }
   .publication-list { padding-left: 28px; }
 }
