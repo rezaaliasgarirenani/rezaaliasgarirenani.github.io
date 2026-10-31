@@ -9,7 +9,7 @@ A small, static, multipage site built with HTML, CSS, and JavaScript. The base s
 - `index.html` — three terminal-style panels for personal information, research experience, and education. The profile starts immediately after the name.
 - `research.html` — RTL and verification, semiconductor physics, and plasma systems.
 - `publications.html` — journal articles, conference papers, posters, and presentations.
-- `about.html` — background, skills, languages, contacts, and academic profiles.
+- `about.html` — background, skills, languages, awards and scholarships, contacts, and academic profiles.
 - `src/site.css` — shared layout, typography, and responsive/print styles.
 - `src/header_binary.js` — continuously fills the 18 px header strip with a seamless binary belt. `SPEED_PX_PER_SECOND = 60` controls horizontal motion; `DIGIT_UPDATE_MS = 70` controls digit changes. Two synchronized copies prevent empty gaps. Pausing stops both movement and digit changes; offscreen/hidden tabs, reduced motion, and JavaScript-free reading remain supported.
 - `src/header_clocks.js` — live 24-hour city clocks with seconds, updated on whole-second boundaries using `Intl.DateTimeFormat` and the IANA zones `America/New_York` and `Asia/Singapore`. New York daylight-saving changes are automatic; no fixed UTC offsets or external time service are used.
@@ -58,8 +58,12 @@ Replace `assets/reza_aliasgari_renani_cv.pdf` when that CV changes and update th
 
 The Instagram, Facebook, X, and LinkedIn destinations were verified against GitHub’s public social-account API for `rezaaliasgarirenani`. The directory sits above the copyright bar on every page, using three compact category columns with 14 px labels and 16 px icons; addresses and account identifiers remain in the link destinations. Scientific profiles are ordered ORCID, ResearchGate, Google Scholar, Scopus, Web of Science, IEEE Xplore. GitHub is grouped with Phone, Email, and Gmail under Contact Info; Social Media contains LinkedIn, Instagram, Facebook, and X. The columns use equal-width tracks, with Contact Info left-aligned, Scientific Identifiers centered, and Social Media right-aligned.
 
-Screen typography uses 16 px body text, at least 14 px for dates and supporting text, and larger headings. Home’s path and centered name share a line on wider screens; small screens wrap the heading to preserve legibility. The contact columns wrap on narrow screens; the smaller footer typography does not affect main content.
+Screen typography uses 16 px body text, at least 14 px for dates and supporting text, and larger headings. Home’s path and centered name share a line on wider screens; small screens wrap the heading to preserve legibility. At widths up to 720 px, the footer categories stack with consistent left alignment; links form two columns within each category with 40 px touch targets. The smaller footer typography does not affect main content.
 
 Home’s three panel titles and numbers identify content rather than simulated live status. The terminal panels stack on smaller screens. Shared footer directories are static HTML in all four pages; keep their link destinations and order synchronized when editing.
 
-Header navigation is ordered CV, Research, portrait/Home, Publications, About. New York sits on the left and Singapore on the right, both with the city name below the time. Narrow screens move the clocks into a separate row to retain readable spacing.
+Header navigation is ordered CV.pdf ↗, Research, portrait/Home, Publications, About. New York sits on the left and Singapore on the right, both with the city name below the time. Narrow screens move the clocks into a separate row to retain readable spacing.
+
+On phones (up to 720 px), a native HTML Menu disclosure contains the four destination links. The portrait remains the Home link. The menu works with a keyboard and without JavaScript, and current-page links are marked in both navigation copies. Desktop navigation stays expanded.
+
+The default two-page CV, both profile READMEs, Home education, and About awards include the rankings and scholarship from the English three-page CV: master’s Top 5%, bachelor’s Top 15%, and Russian Government Scholarship for Foreign Citizens, MIPT, 2020–2026. Rank text uses regular weight. The downloadable PDF is an exact copy of the rebuilt two-page CV.

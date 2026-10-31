@@ -50,6 +50,7 @@ img { display: block; max-width: 100%; }
 .nav-group a[aria-current="page"] { text-decoration-color: var(--accent-blue); }
 .portrait-link { display: block; width: 72px; height: 72px; border: 1px solid var(--foreground); border-radius: 50%; overflow: hidden; }
 .portrait-link img { width: 100%; height: 100%; object-fit: cover; }
+.mobile-navigation { display: none; }
 .header-motion { display: grid; grid-template-columns: minmax(0, 1fr) 24px; align-items: center; gap: 8px; padding-bottom: 4px; }
 /* One continuously filled belt; its duplicate makes each loop seamless. */
 .binary-strip { --binary-width: 1200px; --binary-duration: 10s; position: relative; height: 18px; overflow: hidden; contain: paint; pointer-events: none; color: var(--accent-blue); font: 10px/18px var(--mono); letter-spacing: 2px; mask-image: linear-gradient(90deg, transparent, #000 3%, #000 97%, transparent); }
@@ -172,7 +173,17 @@ h1 { font-size: clamp(28px, 3.4vw, 38px); line-height: 1.45; letter-spacing: -.0
   .clock-new-york { grid-column: 1 / 3; grid-row: 2; justify-self: start; }
   .clock-singapore { grid-column: 2 / 4; grid-row: 2; justify-self: end; }
   .chip-logo { width: 30px; height: 30px; }
-  .site-nav { grid-column: 2; grid-row: 1; grid-template-columns: 1fr 64px 1fr; gap: 16px; padding-block: 24px 12px; }
+  .site-nav { grid-column: 2; grid-row: 1; display: flex; justify-content: center; padding-block: 20px 12px; }
+  .site-nav .nav-group { display: none; }
+  .mobile-navigation { display: block; margin-block: 16px 8px; border: 1px solid var(--rule); border-radius: 3px; }
+  .mobile-navigation summary { display: flex; justify-content: space-between; align-items: center; min-height: 48px; padding: 10px 14px; font-size: 14px; cursor: pointer; list-style: none; }
+  .mobile-navigation summary::-webkit-details-marker { display: none; }
+  .mobile-navigation .prompt, .menu-indicator { color: var(--accent-blue); }
+  .menu-indicator::before { content: "+"; }
+  .mobile-navigation[open] .menu-indicator::before { content: "−"; }
+  .mobile-navigation nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 12px; padding: 8px 14px 12px; border-top: 1px solid var(--rule); }
+  .mobile-navigation a { display: flex; align-items: center; gap: 6px; min-height: 44px; font-size: 14px; text-decoration: none; }
+  .mobile-navigation a:hover, .mobile-navigation a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--accent-blue); }
   .portrait-link { width: 64px; height: 64px; }
   .nav-group a { padding-block: 8px; font-size: 14px; }
   main { padding-top: 30px; }
@@ -194,21 +205,25 @@ h1 { font-size: clamp(28px, 3.4vw, 38px); line-height: 1.45; letter-spacing: -.0
   .publication-list { padding-left: 28px; }
 }
 @media (max-width: 480px) {
-  .header-inner { grid-template-columns: 30px minmax(0, 1fr) 30px; align-items: start; gap: 4px; }
-  .header-inner .chip-logo { margin-top: 41px; }
-  .site-nav { grid-template-columns: 1fr 1fr; gap: 12px; }
-  .portrait-link { grid-column: 1 / -1; grid-row: 1; justify-self: center; }
-  .nav-left { grid-column: 1; grid-row: 2; }
-  .nav-right { grid-column: 2; grid-row: 2; }
   .record-line { grid-template-columns: 1fr; gap: 4px; }
   .record-line dd { padding-left: 20px; }
   .console-titlebar { padding-inline: 16px; }
   .console-body { padding: 22px 16px; }
 }
-@media (max-width: 600px) {
-  .footer-directory { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
-  .contact-group:last-child { grid-column: 1 / -1; }
-  .contact-group:last-child .contact-list { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px 16px; }
+@media (max-width: 720px) {
+  .footer-directory { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .footer-directory .contact-group { text-align: left; }
+  .footer-directory .contact-group + .contact-group { padding-top: 20px; border-top: 1px solid var(--rule); }
+  .footer-directory .contact-group .contact-list { grid-template-columns: repeat(2, minmax(0, 1fr)); justify-items: start; column-gap: 16px; row-gap: 4px; }
+  .footer-directory .contact-link { min-height: 40px; padding-block: 7px; }
+  .footer-bottom { row-gap: 14px; }
+  .footer-content { display: contents; }
+  .footer-content > a { grid-column: 1 / 3; grid-row: 2; }
+  .footer-name { grid-column: 2; grid-row: 1; }
+  .footer-right { grid-column: 2 / 4; grid-row: 2; }
+  .footer-bottom > .chip-logo { grid-row: 1; }
+  .footer-bottom > .chip-logo:first-child { grid-column: 1; }
+  .footer-bottom > .chip-logo:last-child { grid-column: 3; }
 }
 @media (prefers-reduced-motion: reduce) {
   .terminal.is-revealing [data-line]:not(.is-visible) { visibility: visible; }
