@@ -8,6 +8,25 @@ SITE_FILES = (
     "robots.txt", "sitemap.xml", ".nojekyll",
 )
 SITE_DIRECTORIES = ("assets", "src")
+PAGE_ROUTES = {
+    "index.html": "/",
+    "research.html": "/research/",
+    "publications.html": "/publications/",
+    "about.html": "/about/",
+}
+
+
+def legacy_redirect(route):
+    """Keep previously shared .html links working, including query and fragment."""
+    return f'''<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://rezaaliasgarirenani.github.io{route}">
+<meta http-equiv="refresh" content="0;url={route}">
+<title>Page moved</title>
+<script>location.replace("{route}" + location.search + location.hash);</script>
+</head><body><p><a href="{route}">Continue to the page</a></p></body></html>
+'''
 
 
 def build_site(repository_root):
@@ -46,13 +65,18 @@ def build_site(repository_root):
         shutil.rmtree(output)
     output.mkdir()
     for source in sources:
-        destination = output / source.relative_to(root)
+        relative = source.relative_to(root)
+        route = PAGE_ROUTES.get(relative.as_posix())
+        destination = output / (route.lstrip("/") + "index.html" if route else relative)
         destination.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, destination)
+    for source_name, route in PAGE_ROUTES.items():
+        if route != "/":
+            (output / source_name).write_text(legacy_redirect(route), encoding="utf-8")
     return output
 
 
 if __name__ == "__main__":
     output = build_site(Path(__file__).resolve().parents[1])
     print(f"Website staged in {output}")
-    print("Only the four public pages, assets/, src/, and crawler files are published.")
+    print("Only directory pages, legacy redirects, assets/, src/, and crawler files are published.")
