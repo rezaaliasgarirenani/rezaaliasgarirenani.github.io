@@ -16,7 +16,7 @@ A small, static, multipage site built with HTML, CSS, and JavaScript. The base s
 - `src/header_clocks.js` — live 24-hour city clocks with seconds, updated on whole-second boundaries using `Intl.DateTimeFormat` and the IANA zones `America/New_York` and `Asia/Singapore`. New York daylight-saving changes are automatic; no fixed UTC offsets or external time service are used.
 - `src/terminal.js` — line-by-line reveal on Home, with `LINE_DELAY_MS = 50` (50 milliseconds between lines). The 30 current output units take approximately 1.45 seconds in total. Footer links remain visible independently of the reveal. Visitors can skip the reveal; reduced-motion preferences show everything immediately. All content and navigation also work without JavaScript.
 - `assets/reza_aliasgari_renani.png` — portrait used in the circular Home link.
-- `assets/chip_radiation_logo.png` — the user-supplied transparent chip logo, shared with both profile READMEs; used on both sides of the header/footer and as the browser favicon.
+- `assets/chip_radiation_logo.png` — the user-supplied transparent chip logo, optimized to a 320 × 320 PNG (about 48 KB) and shared with both profile READMEs; used on both sides of the header/footer and as the browser favicon.
 - `assets/icons/` — contact and profile icons. Scientific, GitHub, and LinkedIn SVGs are copied from `../rezaaliasgarirenani/assets_readme/`; Instagram, Facebook, X, and Gmail icons are from the CC0 Simple Icons project. Email and phone are simple local SVGs.
 - `assets/reza_aliasgari_renani_cv.pdf` — downloadable English two-page CV.
 
