@@ -27,11 +27,13 @@ both the home page and nested public routes.
 
 ## Home and shared layout
 
-Home starts with the original satellite/Earth animation centered between the
-full name on the left and three research areas on the right: RTL Design,
-Semiconductor Physics, and Plasma Systems. The former README's FPGA-based ISP
-summary appears below in smaller text. Phones arrange the name and research
-areas above the centered animation to preserve legibility.
+Home starts immediately below the header without path labels or an empty
+toolbar. On desktop, the full name, original satellite/Earth animation, and
+“RTL Design | Semiconductor Physics | Plasma Systems” share one compact row,
+each centered. The summary stays below, now 16 px (14 px on phones). Up to
+1100 px, the three blocks stack and text may wrap to preserve readability.
+The show-all control lives in the Profile title bar rather than reserving
+space above the introduction.
 
 The Profile, Research Experience, and Education terminal panels retain their
 content and timelines. `src/terminal.js` reveals their 29 output units at 50 ms
