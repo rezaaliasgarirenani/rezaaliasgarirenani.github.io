@@ -27,13 +27,12 @@ both the home page and nested public routes.
 
 ## Home and shared layout
 
-Home starts immediately below the header without path labels or an empty
-toolbar. On desktop, the full name, original satellite/Earth animation, and
-“RTL Design | Semiconductor Physics | Plasma Systems” share one compact row,
-each centered. The summary stays below, now 16 px (14 px on phones). Up to
-1100 px, the three blocks stack and text may wrap to preserve readability.
-The show-all control lives in the Profile title bar rather than reserving
-space above the introduction.
+Home starts immediately below the header with a centered Earth/satellite
+animation up to 520 px wide. The separate visible name and research-area labels
+are omitted. The centered paragraph beneath begins with the supplied greeting,
+introduces Reza, and continues with the FPGA-based ISP summary. Text stays 16 px
+(14 px on phones). A visually hidden main heading retains the page's accessible
+name. The show-all control remains in the Profile title bar.
 
 The Profile, Research Experience, and Education terminal panels retain their
 content and timelines. `src/terminal.js` reveals their 29 output units at 50 ms
