@@ -62,12 +62,16 @@ linked to the shared motion state, for four rail controls total.
 hidden tabs and page lifecycle events suspend activity. Reduced motion and
 JavaScript-free reading show static decorative digits.
 
-The footer has the same full-width divider as the header. It retains the two
-outer chip logos and the copyright notice, with all 14 contact/profile icons
-centered relative to the page. The motto and group headings are omitted.
+The footer divider follows the content width, aligned with the main panels.
+It retains the two outer chip logos and the copyright notice, with all 14 contact/profile icons
+anchored at the original icon strip's left edge on desktop, with extra spacing
+expanding toward the right. Icons have 4 px gaps within each group and
+18 px gaps between contact, scientific, and social groups. Group names are
+accessible labels only; the motto and visible group headings are omitted.
 Copyright text is 10.5 px, icons are 18 px with 24 px link targets, and desktop
-chip logos are 32 px. Smaller screens wrap the text and icon strip into compact
-rows, with two even rows of seven icons on narrow phones.
+chip logos are 32 px. The desktop copyright remains on one line. Smaller
+screens retain responsive text wrapping and center the groups in two rows of
+icons, retaining the gaps between groups.
 
 ## Artwork and content
 
