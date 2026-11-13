@@ -13,7 +13,7 @@
   <meta property="og:title" content="Reza Aliasgari Renani">
   <meta property="og:description" content="Reza Aliasgari Renani. Electronics and applied physics, research experience, and education at MIPT.">
   <meta property="og:url" content="https://rezaaliasgarirenani.github.io/">
-  <link rel="stylesheet" href="/src/site.css?v=terminal-16">
+  <link rel="stylesheet" href="/src/site.css?v=terminal-17">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -59,10 +59,14 @@
     <div class="terminal" data-terminal>
       <section class="home-intro" aria-labelledby="home-name">
         <h1 class="visually-hidden" id="home-name">Reza Aliasgari Renani</h1>
-        <picture class="home-orbit">
-          <source media="(prefers-reduced-motion: reduce)" srcset="/assets/earth_satellite_still.png">
-          <img src="/assets/earth_satellite.png" width="720" height="420" alt="The original satellite orbiting Earth under radiation exposure" decoding="async" fetchpriority="high">
-        </picture>
+        <div class="home-orbit" data-orbit>
+          <picture data-orbit-fallback>
+            <source media="(prefers-reduced-motion: reduce)" srcset="/assets/earth_satellite_still.png">
+            <img src="/assets/earth_satellite.png" width="720" height="420" alt="The original satellite orbiting Earth under radiation exposure" decoding="async" fetchpriority="high">
+          </picture>
+          <canvas id="earth-orbit" data-orbit-canvas width="720" height="420" role="img" aria-label="The original satellite orbiting Earth under radiation exposure" hidden></canvas>
+          <button class="orbit-motion-toggle" type="button" data-orbit-toggle aria-controls="earth-orbit" aria-label="Pause Earth animation" title="Pause Earth animation" aria-pressed="false" hidden><span aria-hidden="true">Ⅱ</span></button>
+        </div>
         <p class="home-summary">Greetings and the most cordial of pleasantries to your lordships and ladyships. My name is Reza and I work on FPGA-based ISP, electrical characterization of semiconductor devices, plasma systems and radiation conditions.</p>
       </section>
         <section class="console-panel identity" aria-labelledby="profile-panel-heading">
@@ -165,6 +169,8 @@
       <img class="chip-logo footer-logo" src="/assets/chip_radiation_logo.png?v=chip-3" width="28" height="28" alt="" aria-hidden="true">
     </div>
   </footer>
+  <script src="/src/vendor/apng-js-1.1.5.min.js" defer></script>
+  <script src="/src/orbit.js?v=orbit-1" defer></script>
   <script src="/src/terminal.js?v=terminal-4" defer></script>
   <script src="/src/clean_urls.js?v=routes-1" defer></script>
   <script src="/src/header_layout.js?v=sticky-1" defer></script>

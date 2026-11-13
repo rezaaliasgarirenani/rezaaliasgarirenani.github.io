@@ -32,7 +32,16 @@ animation up to 520 px wide. The separate visible name and research-area labels
 are omitted. The centered paragraph beneath begins with the supplied greeting,
 introduces Reza, and continues with the FPGA-based ISP summary. Text stays 16 px
 (14 px on phones). A visually hidden main heading retains the page's accessible
-name. The show-all control remains in the Profile title bar.
+name. A small pause/resume control at the animation's bottom-right freezes its
+current frame and resumes from there, independently of the binary streams.
+Playback pauses in hidden tabs; reduced motion uses the still picture. The
+original picture remains available if JavaScript or playback setup is unavailable.
+The show-all control remains in the Profile title bar.
+
+`src/orbit.js` plays the existing APNG on a canvas through the locally vendored
+[apng-js 1.1.5](https://github.com/davidmz/apng-js) (MIT). Its minified browser
+build and license are in `src/vendor/`; no external runtime request is needed.
+The original animation asset and frame timing are unchanged.
 
 The Profile, Research Experience, and Education terminal panels retain their
 content and timelines. `src/terminal.js` reveals their 29 output units at 50 ms
