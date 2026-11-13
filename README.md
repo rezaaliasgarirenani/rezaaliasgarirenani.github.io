@@ -33,7 +33,9 @@ are omitted. The centered paragraph beneath begins with the supplied greeting,
 introduces Reza, and continues with the FPGA-based ISP summary. Text stays 16 px
 (14 px on phones). A visually hidden main heading retains the page's accessible
 name. A small pause/resume control at the animation's bottom-right freezes its
-current frame and resumes from there, independently of the binary streams.
+current frame and resumes from there. All five motion buttons share one pause
+state through `src/motion.js`: any button pauses or resumes Earth and both binary
+streams together, and every button displays the same state.
 Playback pauses in hidden tabs; reduced motion uses the still picture. The
 original picture remains available if JavaScript or playback setup is unavailable.
 The show-all control remains in the Profile title bar.
@@ -55,16 +57,17 @@ with daylight-saving changes handled by `Intl.DateTimeFormat`.
 
 `src/side_binary.js` runs two narrow, fixed vertical binary streams outside the
 content: left moves down, right moves up. Each has top and bottom pause buttons
-controlling the same side, for four controls total. `SPEED_PX_PER_SECOND = 60`
-and `DIGIT_UPDATE_MS = 70` control motion and digit updates. Pausing freezes both;
+linked to the shared motion state, for four rail controls total.
+`SPEED_PX_PER_SECOND = 60` and `DIGIT_UPDATE_MS = 70` control motion and digit updates. Pausing freezes both;
 hidden tabs and page lifecycle events suspend activity. Reduced motion and
 JavaScript-free reading show static decorative digits.
 
-The footer is a single compact desktop row: chip logo, copyright notice, all
-14 contact/profile icons centered relative to the page, Fidelity · Bravery ·
-Integrity motto, and chip logo. Icons are 16 px with 24 px link targets; group
-headings and divider rules are omitted. Smaller screens wrap the text and icon
-strip into compact rows, with two even rows of seven icons on narrow phones.
+The footer has the same full-width divider as the header. It retains the two
+outer chip logos and the copyright notice, with all 14 contact/profile icons
+centered relative to the page. The motto and group headings are omitted.
+Copyright text is 10.5 px, icons are 18 px with 24 px link targets, and desktop
+chip logos are 32 px. Smaller screens wrap the text and icon strip into compact
+rows, with two even rows of seven icons on narrow phones.
 
 ## Artwork and content
 
