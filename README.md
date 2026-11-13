@@ -51,11 +51,11 @@ and `DIGIT_UPDATE_MS = 70` control motion and digit updates. Pausing freezes bot
 hidden tabs and page lifecycle events suspend activity. Reduced motion and
 JavaScript-free reading show static decorative digits.
 
-The footer retains the two outer chip logos, centered Contact Info / Scientific
-Identifiers / Social Media groups, and the two-line copyright/name notice with
-a larger copyright symbol. The Fidelity · Bravery · Integrity motto is slightly
-larger (14 px, 13 px on narrow phones). Responsive footer wrapping keeps the
-contact groups centered relative to the page.
+The footer is a single compact desktop row: chip logo, copyright notice, all
+14 contact/profile icons centered relative to the page, Fidelity · Bravery ·
+Integrity motto, and chip logo. Icons are 16 px with 24 px link targets; group
+headings and divider rules are omitted. Smaller screens wrap the text and icon
+strip into compact rows, with two even rows of seven icons on narrow phones.
 
 ## Artwork and content
 
