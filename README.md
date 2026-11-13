@@ -71,7 +71,7 @@ which is right-aligned before the right chip logo.
 Copyright and country text are 11.83 px (a 1 pt increase from 10.5 px); icons are
 18 px with 24 px link targets, and desktop chip logos are 32 px. Smaller screens
 retain responsive text wrapping and center the three groups in two rows of icons,
-with the country on its own right-aligned line.
+with the country on its own line, centered on phones (720 px and below).
 
 ## Artwork and content
 

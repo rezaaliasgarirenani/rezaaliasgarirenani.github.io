@@ -217,6 +217,7 @@ h1 { font-size: clamp(28px, 3.4vw, 38px); line-height: 1.45; letter-spacing: -.0
   .footer-logo:last-child { grid-column: 3; }
   .footer-copyright { grid-column: 2; grid-row: 1; text-align: center; }
   .footer-directory { grid-column: 1 / -1; grid-row: 2; justify-self: center; }
+  .footer-location { justify-self: center; }
 }
 @media (max-width: 600px) {
   .footer-directory { display: grid; grid-template-columns: max-content auto max-content auto max-content; align-items: center; gap: 10px; }
