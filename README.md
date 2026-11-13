@@ -63,15 +63,14 @@ hidden tabs and page lifecycle events suspend activity. Reduced motion and
 JavaScript-free reading show static decorative digits.
 
 The footer divider follows the content width, aligned with the main panels.
-It retains the two outer chip logos and the copyright notice, with all 14 contact/profile icons
-anchored at the original icon strip's left edge on desktop, with extra spacing
-expanding toward the right. Icons have 4 px gaps within each group and
-18 px gaps between contact, scientific, and social groups. Group names are
-accessible labels only; the motto and visible group headings are omitted.
-Copyright text is 10.5 px, icons are 18 px with 24 px link targets, and desktop
-chip logos are 32 px. The desktop copyright remains on one line. Smaller
-screens retain responsive text wrapping and center the groups in two rows of
-icons, retaining the gaps between groups.
+It retains the two outer chip logos, the single-line desktop copyright, and all
+14 contact/profile icons. Icons have 4 px gaps within groups; decorative `|`
+separators have 14 px of space on each side. Group names are accessible labels
+only. "United States" is right-aligned before the right chip logo.
+Copyright and country text are 11.83 px (a 1 pt increase from 10.5 px); icons are
+18 px with 24 px link targets, and desktop chip logos are 32 px. Smaller screens
+retain responsive text wrapping and center the three groups in two rows of icons,
+with the country on its own right-aligned line.
 
 ## Artwork and content
 
